@@ -1,7 +1,8 @@
 "use client";
 
-import { ArrowUpRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { PhoneFrame } from "@/components/ui/PhoneFrame";
+import { useReelPlayer } from "@/components/ui/ReelPlayerProvider";
 import type { Video } from "@/lib/site";
 
 type ReelCardProps = {
@@ -10,14 +11,26 @@ type ReelCardProps = {
 };
 
 export function ReelCard({ video, className = "" }: ReelCardProps) {
+  const { openReel } = useReelPlayer();
+
   return (
-    <a
-      href={video.href}
-      target="_blank"
-      rel="noreferrer noopener"
-      className={`group block ${className}`}
-      data-cursor="Watch reel"
-      aria-label={`Watch ${video.title} on Instagram`}
+    <button
+      type="button"
+      onClick={() =>
+        openReel({
+          title: video.title,
+          brand: video.brand,
+          image: video.image,
+          views: video.views,
+          type: video.type,
+          video: video.video,
+          webm: video.webm,
+          startAt: video.startAt,
+        })
+      }
+      className={`group block w-full text-left ${className}`}
+      data-cursor="Play reel"
+      aria-label={`Play ${video.title}`}
     >
       <PhoneFrame>
         <div className="relative aspect-[9/16] overflow-hidden">
@@ -52,20 +65,22 @@ export function ReelCard({ video, className = "" }: ReelCardProps) {
               <h3 className="display-soft text-base leading-[1.1] text-paper">
                 {video.title}
               </h3>
-              <ArrowUpRight
-                className="mb-0.5 size-3.5 shrink-0 text-paper/50 transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-paper"
-                strokeWidth={1.4}
+              <Play
+                className="mb-0.5 size-3 shrink-0 fill-current text-paper/45 transition-colors duration-500 group-hover:text-paper"
+                strokeWidth={1}
               />
             </div>
             <div className="mt-2 flex items-center justify-between border-t border-paper/20 pt-2">
               <span className="label text-[7px] text-paper/55">
                 {video.type}
               </span>
-              <span className="label text-[7px] text-paper/55">Reel</span>
+              <span className="label text-[7px] text-paper/55">
+                {video.video ? "Play here" : "Preview"}
+              </span>
             </div>
           </div>
         </div>
       </PhoneFrame>
-    </a>
+    </button>
   );
 }

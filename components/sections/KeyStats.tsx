@@ -1,7 +1,7 @@
 import { Eye, Play, TrendingUp, Users } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { insights, keyStats } from "@/lib/site";
+import { keyStats } from "@/lib/site";
 
 const icons = [Eye, Play, Users, TrendingUp];
 
@@ -57,16 +57,6 @@ export function KeyStats() {
               </Reveal>
             );
           })}
-        </div>
-
-        <div className="mt-12 flex flex-col gap-2 border-t border-ink/15 pt-4 text-[10px] text-ink-soft sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            Views, followers and posts from Instagram Insights ·{" "}
-            {insights.asOf}
-          </p>
-          <p className="label text-[7px]">
-            Engagement rate is an approximate average
-          </p>
         </div>
       </div>
     </section>

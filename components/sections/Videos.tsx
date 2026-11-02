@@ -1,8 +1,8 @@
-import { ArrowUpRight } from "lucide-react";
 import { ReelCard } from "@/components/ui/ReelCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { moreBrandWork, site, videos } from "@/lib/site";
+import { SmoothLink } from "@/components/ui/SmoothLink";
+import { moreBrandWork, videos } from "@/lib/site";
 
 export function Videos() {
   return (
@@ -26,7 +26,7 @@ export function Videos() {
               films to a gummy ritual, a foundation reel and a South Goa villa.
             </p>
             <p className="label mt-4 text-[8px] text-ink-soft">
-              Tap a card to watch on Instagram
+              Tap a card to watch in-page
             </p>
           </div>
         </div>
@@ -57,20 +57,12 @@ export function Videos() {
                 </span>
               ))}
             </div>
-            <a
-              href={site.instagram}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="group flex w-fit items-center gap-2"
+            <SmoothLink
+              href="#contact"
+              className="label link-line w-fit text-[8px]"
             >
-              <span className="label link-line text-[8px]">
-                See every reel on Instagram
-              </span>
-              <ArrowUpRight
-                className="size-3.5 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                strokeWidth={1.4}
-              />
-            </a>
+              Request the full archive
+            </SmoothLink>
           </div>
         </Reveal>
       </div>

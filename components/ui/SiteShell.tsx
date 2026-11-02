@@ -6,6 +6,7 @@ import { Grain } from "@/components/ui/Grain";
 import { IntroContext } from "@/components/ui/IntroContext";
 import { Nav } from "@/components/ui/Nav";
 import { Preloader } from "@/components/ui/Preloader";
+import { ReelPlayerProvider } from "@/components/ui/ReelPlayerProvider";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 
@@ -36,6 +37,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
   return (
     <IntroContext.Provider value={{ ready }}>
       <SmoothScroll>
+        <ReelPlayerProvider>
         <a
           href="#main"
           className="sr-only z-[140] rounded-full bg-ink px-5 py-3 text-sm text-paper focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
@@ -48,6 +50,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <ScrollProgress />
         <Nav />
         {children}
+        </ReelPlayerProvider>
       </SmoothScroll>
     </IntroContext.Provider>
   );

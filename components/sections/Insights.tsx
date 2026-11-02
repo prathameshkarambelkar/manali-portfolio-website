@@ -4,7 +4,6 @@ import { motion, useInView } from "motion/react";
 import {
   CalendarDays,
   Eye,
-  Grid3X3,
   Sparkles,
   UserPlus,
   Users,
@@ -39,12 +38,6 @@ const metrics: Metric[] = [
     value: insights.netFollowers,
     note: "net growth",
     Icon: UserPlus,
-  },
-  {
-    label: "Posts",
-    value: insights.posts,
-    note: "published",
-    Icon: Grid3X3,
   },
   {
     label: "Non-follower views",
@@ -83,9 +76,6 @@ export function Insights() {
                 <CalendarDays className="size-3" />
                 {insights.period}
               </span>
-              <span className="label text-[8px] text-ink-soft">
-                As of {insights.asOf}
-              </span>
             </div>
           </div>
         </div>
@@ -104,18 +94,13 @@ export function Insights() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="label text-[7px] text-ink-soft">
-                  Screenshots available on request
-                </span>
-                <span className="chip border-teal/30 bg-teal/10 text-[7px] text-teal">
-                  Instagram Insights
-                </span>
-              </div>
+              <span className="chip border-teal/30 bg-teal/10 text-[7px] text-teal">
+                Instagram Insights
+              </span>
             </div>
 
             <div className="px-5 py-6 sm:px-7">
-              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5">
+              <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-4">
                 {metrics.map((metric) => (
                   <div
                     key={metric.label}
@@ -293,9 +278,6 @@ export function Insights() {
                       <span className="label text-[7px] text-paper/50">
                         {insights.netFollowers} net
                       </span>
-                      <span className="label text-[7px] text-paper/50">
-                        {insights.posts} posts
-                      </span>
                     </div>
                   </div>
                   <span className="grid size-10 shrink-0 place-items-center rounded-full border border-paper/25">
@@ -317,18 +299,13 @@ export function Insights() {
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                     of views came from people who don&apos;t follow yet — new
-                    eyes on every post.
+                    eyes on every reel.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </Reveal>
-
-        <div className="mt-4 flex flex-col gap-1 text-[10px] text-ink-soft sm:flex-row sm:items-center sm:justify-between">
-          <p>Numbers rounded from Instagram Insights · {insights.asOf}</p>
-          <p className="label text-[7px]">Screenshots available on request</p>
-        </div>
       </div>
     </section>
   );

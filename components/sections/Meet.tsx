@@ -2,6 +2,7 @@
 
 import { ArrowUpRight, Play } from "lucide-react";
 import { PhoneFrame } from "@/components/ui/PhoneFrame";
+import { useReelPlayer } from "@/components/ui/ReelPlayerProvider";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { useLenis } from "@/components/ui/SmoothScroll";
@@ -9,6 +10,7 @@ import { site } from "@/lib/site";
 
 export function Meet() {
   const lenis = useLenis();
+  const { openReel } = useReelPlayer();
 
   const goToVideos = () => {
     const el = document.querySelector("#videos");
@@ -30,13 +32,20 @@ export function Meet() {
             <div className="relative mx-auto w-full max-w-[340px]">
               <Reveal>
                 <PhoneFrame>
-                  <a
-                    href={site.instagram}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="group relative block aspect-[9/16] overflow-hidden"
+                  <button
+                    type="button"
+                    onClick={() =>
+                      openReel({
+                        title: "Intro film",
+                        brand: "Manali Jagtap",
+                        image: "/images/intro.webp",
+                        duration: "0:42",
+                        type: "Intro film",
+                      })
+                    }
+                    className="group relative block aspect-[9/16] w-full overflow-hidden text-left"
                     data-cursor="Play intro"
-                    aria-label="Watch Manali's intro reel on Instagram"
+                    aria-label="Open Manali's intro film"
                   >
                     <img
                       src="/images/intro.webp"
@@ -66,7 +75,7 @@ export function Meet() {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </button>
                 </PhoneFrame>
               </Reveal>
 
@@ -86,7 +95,7 @@ export function Meet() {
             </div>
 
             <p className="label mt-6 text-center text-[8px] text-ink-soft">
-              Intro film — 0:42 · tap to watch on Instagram
+              Intro film — 0:42 · tap to open
             </p>
           </div>
 
@@ -107,21 +116,6 @@ export function Meet() {
                 </Reveal>
               ))}
             </div>
-
-            <Reveal delay={0.18}>
-              <div className="mt-8 flex flex-wrap items-center gap-5 border-y border-ink/15 py-5">
-                <p className="display text-[clamp(2.8rem,4vw,3.6rem)] leading-none">
-                  {site.years}
-                </p>
-                <p className="max-w-[15rem] text-sm leading-relaxed text-ink-soft">
-                  years of making travel, stay and food content that people
-                  actually save for later.
-                </p>
-                <span className="script ml-auto hidden text-3xl text-clay sm:block">
-                  and counting
-                </span>
-              </div>
-            </Reveal>
 
             <Reveal delay={0.22}>
               <div className="mt-6 flex flex-wrap gap-2">

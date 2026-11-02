@@ -28,7 +28,7 @@ export function Contact() {
 
       <div className="container-x relative">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-paper/15 pb-5">
-          <SectionLabel index="10" light>
+          <SectionLabel index="08" light>
             Contact
           </SectionLabel>
           <div className="flex items-center gap-2">

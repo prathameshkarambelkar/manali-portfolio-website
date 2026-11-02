@@ -88,10 +88,10 @@ export function Reach() {
               </div>
               <div>
                 <p className="display text-2xl leading-none">
-                  {insights.posts}
+                  {insights.dailyAverage}
                 </p>
                 <p className="label mt-2 text-[7px] text-paper/45">
-                  posts published
+                  daily average
                 </p>
               </div>
             </div>

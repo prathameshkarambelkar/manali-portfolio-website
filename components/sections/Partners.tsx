@@ -1,13 +1,26 @@
+"use client";
+
 import { ArrowUpRight, Play } from "lucide-react";
 import { PhoneFrame } from "@/components/ui/PhoneFrame";
+import { useReelPlayer } from "@/components/ui/ReelPlayerProvider";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { SmoothLink } from "@/components/ui/SmoothLink";
-import { partners, site } from "@/lib/site";
+import { partners } from "@/lib/site";
 
 export function Partners() {
-  const featured = partners.find((partner) => partner.name === "Casa Regal");
-  const featuredHref = featured?.collab ?? featured?.href ?? site.instagram;
+  const { openReel } = useReelPlayer();
+  const openCasaRegal = () =>
+    openReel({
+      title: "Casa Regal villa",
+      brand: "Casa Regal",
+      image: "/images/partner-featured.webp",
+      views: "24.6K",
+      type: "Stay tour",
+      video: "/videos/casa-regal.mp4",
+      webm: "/videos/casa-regal.webm",
+      startAt: 6,
+    });
 
   return (
     <section id="partners" className="relative py-24 sm:py-32">
@@ -109,12 +122,12 @@ export function Partners() {
           <div className="lg:col-span-5">
             <Reveal delay={0.1}>
               <div className="lg:sticky lg:top-28">
-                <a
-                  href={featuredHref}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="group block"
-                  data-cursor="Watch stay tour"
+                <button
+                  type="button"
+                  onClick={openCasaRegal}
+                  className="group block w-full text-left"
+                  data-cursor="Play stay tour"
+                  aria-label="Play the Casa Regal stay tour"
                 >
                   <PhoneFrame>
                     <div className="relative aspect-[9/16] overflow-hidden">
@@ -159,19 +172,18 @@ export function Partners() {
                       </div>
                     </div>
                   </PhoneFrame>
-                </a>
+                </button>
                 <div className="mt-4 flex items-center justify-between gap-3">
                   <p className="text-xs text-ink-soft">
                     Featured collaboration — Casa Regal, 2026
                   </p>
-                  <a
-                    href={featuredHref}
-                    target="_blank"
-                    rel="noreferrer noopener"
+                  <button
+                    type="button"
+                    onClick={openCasaRegal}
                     className="label link-line text-[7px]"
                   >
-                    Watch
-                  </a>
+                    Play
+                  </button>
                 </div>
               </div>
             </Reveal>

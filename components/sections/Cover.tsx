@@ -7,6 +7,7 @@ import { useIntro } from "@/components/ui/IntroContext";
 import { Magnetic } from "@/components/ui/Magnetic";
 import { Marquee } from "@/components/ui/Marquee";
 import { PhoneFrame } from "@/components/ui/PhoneFrame";
+import { useReelPlayer } from "@/components/ui/ReelPlayerProvider";
 import { MaskLines } from "@/components/ui/Reveal";
 import { useLenis } from "@/components/ui/SmoothScroll";
 import { coverStats, site } from "@/lib/site";
@@ -16,21 +17,21 @@ const coverReels = [
     image: "/images/cover-aarti.webp",
     place: "Haridwar",
     views: "793K",
-    href: site.instagram,
     tilt: "-rotate-[1.5deg]",
   },
   {
     image: "/images/cover-goa.webp",
     place: "Goa",
     views: "56.2K",
-    href: site.instagram,
     tilt: "rotate-[0.8deg]",
   },
   {
     image: "/images/video-mars.webp",
     place: "MARS",
     views: "13.1K",
-    href: "https://www.instagram.com/p/Dd0RtuvBbut/",
+    video: "/videos/mars.mp4",
+    webm: "/videos/mars.webm",
+    startAt: 2,
     tilt: "-rotate-[0.6deg]",
   },
 ];
@@ -45,6 +46,7 @@ const tickerItems = [
 
 export function Cover() {
   const { ready } = useIntro();
+  const { openReel } = useReelPlayer();
   const lenis = useLenis();
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -115,17 +117,6 @@ export function Cover() {
                     ]}
                     lineClassName="text-[clamp(3.2rem,8.8vw,8rem)] leading-[0.9]"
                   />
-                  <motion.span
-                    className="mb-3 flex items-center gap-3"
-                    initial={{ opacity: 0 }}
-                    animate={ready ? { opacity: 1 } : {}}
-                    transition={{ duration: 1, delay: 0.95 }}
-                  >
-                    <span className="h-px w-10 bg-ink/25" />
-                    <span className="label text-[8px] text-ink-soft">
-                      {site.years} years · {site.since}—26
-                    </span>
-                  </motion.span>
                 </span>
               </h1>
 
@@ -241,12 +232,22 @@ export function Cover() {
                 style={{ y: phonesY }}
               >
                 {coverReels.map((reel, index) => (
-                  <motion.a
+                  <motion.button
                     key={reel.place}
-                    href={reel.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className={`group block ${reel.tilt} ${
+                    type="button"
+                    onClick={() =>
+                      openReel({
+                        title: `${reel.place} reel`,
+                        brand: reel.place,
+                        image: reel.image,
+                        views: reel.views,
+                        type: "Reel",
+                        video: reel.video,
+                        webm: reel.webm,
+                        startAt: reel.startAt,
+                      })
+                    }
+                    className={`group block text-left ${reel.tilt} ${
                       index === 1 ? "mt-7 sm:mt-10" : index === 2 ? "mt-2" : ""
                     }`}
                     initial={{ opacity: 0, y: 36 }}
@@ -256,8 +257,8 @@ export function Cover() {
                       delay: 0.6 + index * 0.12,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    data-cursor="Watch"
-                    aria-label={`Watch the ${reel.place} reel on Instagram`}
+                    data-cursor="Play reel"
+                    aria-label={`Play the ${reel.place} reel`}
                   >
                     <PhoneFrame className="transition-transform duration-700 group-hover:rotate-0 group-hover:scale-[1.02]">
                       <div className="relative aspect-[9/16] overflow-hidden">
@@ -283,7 +284,7 @@ export function Cover() {
                         </div>
                       </div>
                     </PhoneFrame>
-                  </motion.a>
+                  </motion.button>
                 ))}
               </motion.div>
 
@@ -296,14 +297,13 @@ export function Cover() {
                 <span className="label text-[8px] text-ink-soft">
                   Haridwar · Goa · MARS
                 </span>
-                <a
-                  href={site.instagram}
-                  target="_blank"
-                  rel="noreferrer noopener"
+                <button
+                  type="button"
+                  onClick={() => scrollTo("#videos")}
                   className="label link-line text-[8px]"
                 >
                   See all reels
-                </a>
+                </button>
               </motion.div>
             </div>
           </div>

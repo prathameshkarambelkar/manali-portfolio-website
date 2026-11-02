@@ -11,12 +11,11 @@ export const site = {
   phone: "919820000013",
   instagram: "https://www.instagram.com/manalijagtap_13/",
   foodInstagram: "https://www.instagram.com/forking_aroundddd/",
-  years: "3+",
   since: "2023",
   availability: "Open for collaborations · 2026",
   bio: [
     "I'm Manali — a Mumbai-based travel and lifestyle creator who plans trips around light, food and the stories in between. From Ganga aarti mornings in Haridwar to slow Goa afternoons, I make content that feels like a friend's recommendation.",
-    "I create UGC for travel, stays, cafés and beauty brands — reviews, stay tours, unboxings and the kind of reels people save for their next trip. Three years in, and I still get excited about a good window seat.",
+    "I create UGC for travel, stays, cafés and beauty brands — reviews, stay tours, unboxings and the kind of reels people save for their next trip. And I still get excited about a good window seat.",
   ],
   tags: ["Travel", "Lifestyle", "Food", "Stays", "UGC"],
 };
@@ -30,11 +29,9 @@ export const coverStats = [
 
 export const insights = {
   period: "Last 30 days",
-  asOf: "November 2026",
   views: "525K",
   followers: "3,357",
   netFollowers: "+95",
-  posts: "124",
   nonFollowerViews: "486K",
   nonFollowerPct: "92.6%",
   profileVisits: "3.1K",
@@ -122,12 +119,16 @@ export type Video = {
   views: string;
   image: string;
   href: string;
+  video?: string;
+  webm?: string;
+  startAt?: number;
   top?: boolean;
 };
 
 /**
- * Reel URLs are placeholders that point to Manali's Instagram profile.
- * Replace each `href` with the individual reel link before launch.
+ * Local MP4s power in-site playback. Travel reels without a local file open
+ * an in-site "full reel on request" preview instead of redirecting.
+ * `startAt` is the playback offset in seconds.
  */
 export const videos: Video[] = [
   {
@@ -178,6 +179,9 @@ export const videos: Video[] = [
     views: "24.6K",
     image: "/images/partner-featured.webp",
     href: "https://www.instagram.com/reel/DXRqGQOCkkK/",
+    video: "/videos/casa-regal.mp4",
+    webm: "/videos/casa-regal.webm",
+    startAt: 6,
   },
   {
     title: "OneGummy biotin",
@@ -186,6 +190,9 @@ export const videos: Video[] = [
     views: "",
     image: "/images/video-gummy.webp",
     href: "https://www.instagram.com/reel/Dc5DnGSzqmT/",
+    video: "/videos/onegummy.mp4",
+    webm: "/videos/onegummy.webm",
+    startAt: 2,
   },
   {
     title: "MARS foundation",
@@ -194,6 +201,9 @@ export const videos: Video[] = [
     views: "13.1K",
     image: "/images/video-mars.webp",
     href: "https://www.instagram.com/p/Dd0RtuvBbut/",
+    video: "/videos/mars.mp4",
+    webm: "/videos/mars.webm",
+    startAt: 2,
   },
 ];
 
@@ -256,110 +266,9 @@ export const partners: Partner[] = [
   },
 ];
 
-export type Package = {
-  number: string;
-  name: string;
-  price: string;
-  unit: string;
-  line: string;
-  includes: string[];
-  featured?: boolean;
-};
-
-/**
- * Starting rates in INR. Replace with Manali's final pricing.
- */
-export const packages: Package[] = [
-  {
-    number: "01",
-    name: "Sponsored Post",
-    price: "₹12,000",
-    unit: "/ post",
-    line: "One scroll-stopping reel, plus stories.",
-    includes: [
-      "1 reel (20–40s)",
-      "3 story frames",
-      "Hook, script & edit",
-      "30-day organic usage",
-    ],
-  },
-  {
-    number: "02",
-    name: "Brand Ambassador",
-    price: "₹35,000",
-    unit: "/ month",
-    line: "A monthly presence your audience trusts.",
-    includes: [
-      "2 reels + 4 stories / month",
-      "Product integration",
-      "Monthly content calendar",
-      "90-day usage",
-    ],
-  },
-  {
-    number: "03",
-    name: "Video Campaign",
-    price: "₹22,000",
-    unit: "/ campaign",
-    line: "A multi-reel story around your launch.",
-    includes: [
-      "3 reels",
-      "8 edited stills",
-      "Concept + shot list",
-      "60-day paid usage",
-    ],
-    featured: true,
-  },
-  {
-    number: "04",
-    name: "Static + Video Campaign",
-    price: "₹30,000",
-    unit: "/ campaign",
-    line: "One shoot, every asset you need.",
-    includes: [
-      "2 reels + 10 stills",
-      "Creative direction",
-      "2 rounds of edits",
-      "90-day paid usage",
-    ],
-  },
-];
-
-export type Testimonial = {
-  quote: string;
-  author: string;
-  role: string;
-  brand: string;
-};
-
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Manali made our biotin gummies feel like part of a morning ritual. The comments were full of people asking where to buy.",
-    author: "Brand founder",
-    role: "Wellness",
-    brand: "Gummy brand",
-  },
-  {
-    quote:
-      "The foundation reel felt honest, not scripted. It outperformed our own ad cut.",
-    author: "Marketing lead",
-    role: "Beauty",
-    brand: "Cosmetics brand",
-  },
-  {
-    quote:
-      "The villa tour felt like a friend's recommendation — our DMs filled with stay enquiries the same weekend it went live.",
-    author: "Host",
-    role: "Hospitality",
-    brand: "South Goa villa",
-  },
-];
-
 export const navLinks = [
   { label: "Work", href: "#videos" },
   { label: "About", href: "#about" },
   { label: "Insights", href: "#insights" },
-  { label: "Packages", href: "#packages" },
   { label: "Contact", href: "#contact" },
 ];
