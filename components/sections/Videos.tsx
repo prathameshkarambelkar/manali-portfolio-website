@@ -22,8 +22,8 @@ export function Videos() {
           </div>
           <div className="max-w-xs sm:pb-1">
             <p className="text-sm leading-relaxed text-ink-soft">
-              Top performers and recent brand work — from 793K-view travel films
-              to a foundation reel that sold out a shade.
+              Top performers and recent brand work — from 793K-view travel
+              films to a gummy ritual, a foundation reel and a South Goa villa.
             </p>
             <p className="label mt-4 text-[8px] text-ink-soft">
               Tap a card to watch on Instagram
@@ -43,7 +43,7 @@ export function Videos() {
           <div className="mt-10 flex flex-col gap-5 border-t border-ink/15 pt-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
               <span className="label text-[8px] text-ink-soft">
-                More brand work
+                Also in the works
               </span>
               {moreBrandWork.map((work) => (
                 <span

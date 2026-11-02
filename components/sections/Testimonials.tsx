@@ -26,7 +26,7 @@ export function Testimonials() {
           <div className="lg:col-span-4 lg:col-start-9">
             <p className="max-w-sm text-sm leading-relaxed text-ink/65">
               The nicest part of the job is the note that arrives a week after
-              the reel goes live. Three of them, shared with permission.
+              the reel goes live. A few of them, from recent collaborations.
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export function Testimonials() {
         </div>
 
         <div className="mt-6 flex flex-col gap-1 text-[10px] text-ink/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>Quotes shared with permission from each brand.</p>
+          <p>A few notes from recent collaborations.</p>
           <p className="label text-[7px]">More references on request</p>
         </div>
       </div>

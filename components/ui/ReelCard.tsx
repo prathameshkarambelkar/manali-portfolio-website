@@ -31,7 +31,7 @@ export function ReelCard({ video, className = "" }: ReelCardProps) {
 
           <div className="absolute left-3 right-3 top-7 flex flex-wrap items-start justify-between gap-2">
             <span className="chip border-paper/25 bg-ink/30 text-[7px] text-paper backdrop-blur">
-              {video.views} views
+              {video.views ? `${video.views} views` : "Brand collab"}
             </span>
             {video.top && (
               <span className="chip border-gold/40 bg-gold/20 text-[7px] text-gold">

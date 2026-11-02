@@ -25,7 +25,7 @@ export const coverStats = [
   { value: "525K", label: "views in 30 days" },
   { value: "3,357", label: "followers" },
   { value: "793K", label: "top reel" },
-  { value: "8+", label: "brand partners" },
+  { value: "4", label: "brand partners" },
 ];
 
 export const insights = {
@@ -172,20 +172,20 @@ export const videos: Video[] = [
     href: site.instagram,
   },
   {
-    title: "Goa stay tour",
-    brand: "Goa stay",
+    title: "Casa Regal villa",
+    brand: "Casa Regal",
     type: "Stay tour",
     views: "24.6K",
-    image: "/images/video-stay.webp",
-    href: site.instagram,
+    image: "/images/partner-featured.webp",
+    href: "https://www.instagram.com/reel/DXRqGQOCkkK/",
   },
   {
-    title: "Karjat luxury villa",
-    brand: "Karjat villa",
-    type: "Stay tour",
-    views: "23.7K",
-    image: "/images/video-villa.webp",
-    href: site.instagram,
+    title: "OneGummy biotin",
+    brand: "OneGummy",
+    type: "Wellness UGC",
+    views: "",
+    image: "/images/video-gummy.webp",
+    href: "https://www.instagram.com/reel/Dc5DnGSzqmT/",
   },
   {
     title: "MARS foundation",
@@ -193,15 +193,12 @@ export const videos: Video[] = [
     type: "Beauty UGC",
     views: "13.1K",
     image: "/images/video-mars.webp",
-    href: site.instagram,
+    href: "https://www.instagram.com/p/Dd0RtuvBbut/",
   },
 ];
 
 export const moreBrandWork = [
-  { brand: "Bombay Boba & Co.", views: "13.5K" },
-  { brand: "Nuvola Gelato, Dadar", views: "15.1K" },
-  { brand: "Goa stays", views: "15.4K" },
-  { brand: "MARS Cosmetics", views: "13.1K" },
+  { brand: "Maybelline New York", views: "Collab in progress" },
 ];
 
 export const keyStats = [
@@ -214,46 +211,48 @@ export const keyStats = [
 export type Partner = {
   name: string;
   category: string;
-  monogram: string;
-  tone: "ink" | "clay" | "sage" | "teal" | "outline" | "gold";
+  logo: string;
+  href: string;
+  status: "Collab live" | "Content in progress";
+  tone: "ink" | "paper";
+  collab?: string;
 };
 
 export const partners: Partner[] = [
   {
+    name: "OneGummy",
+    category: "Wellness & supplements",
+    logo: "/images/brands/onegummy.webp",
+    href: "https://www.instagram.com/onegummy/",
+    status: "Collab live",
+    tone: "paper",
+    collab: "https://www.instagram.com/reel/Dc5DnGSzqmT/",
+  },
+  {
     name: "MARS Cosmetics",
     category: "Beauty & cosmetics",
-    monogram: "M",
+    logo: "/images/brands/mars.png",
+    href: "https://www.instagram.com/reachedmars/",
+    status: "Collab live",
     tone: "ink",
+    collab: "https://www.instagram.com/p/Dd0RtuvBbut/",
   },
   {
-    name: "Bombay Boba & Co.",
-    category: "Café & beverage",
-    monogram: "BB",
-    tone: "clay",
+    name: "Maybelline New York",
+    category: "Beauty & cosmetics",
+    logo: "/images/brands/maybelline.webp",
+    href: "https://www.instagram.com/maybelline_ind/",
+    status: "Content in progress",
+    tone: "paper",
   },
   {
-    name: "Nuvola Gelato",
-    category: "Dessert & café",
-    monogram: "N",
-    tone: "sage",
-  },
-  {
-    name: "Rowdy Momo Café",
-    category: "Café & food",
-    monogram: "RM",
-    tone: "teal",
-  },
-  {
-    name: "Airbnb stay hosts",
-    category: "Stays & villas",
-    monogram: "A",
-    tone: "outline",
-  },
-  {
-    name: "Goa & Karjat villas",
-    category: "Stay tours",
-    monogram: "GK",
-    tone: "gold",
+    name: "Casa Regal",
+    category: "Stays & villas · South Goa",
+    logo: "/images/brands/casa-regal.webp",
+    href: "https://casaregal.in/",
+    status: "Collab live",
+    tone: "paper",
+    collab: "https://www.instagram.com/reel/DXRqGQOCkkK/",
   },
 ];
 
@@ -336,24 +335,24 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Manali made our café feel like the kind of place you text a friend about. The reel crossed 13K views in a week — and the tables filled up.",
-    author: "Riya Shah",
-    role: "Founder",
-    brand: "Bombay Boba & Co.",
+      "Manali made our biotin gummies feel like part of a morning ritual. The comments were full of people asking where to buy.",
+    author: "Brand founder",
+    role: "Wellness",
+    brand: "Gummy brand",
   },
   {
     quote:
-      "She shot the villa like she actually lived there. Our DMs were full of booking enquiries the same weekend the tour went live.",
-    author: "Arjun Mehta",
-    role: "Host",
-    brand: "Karjat villa",
+      "The foundation reel felt honest, not scripted. It outperformed our own ad cut.",
+    author: "Marketing lead",
+    role: "Beauty",
+    brand: "Cosmetics brand",
   },
   {
     quote:
-      "The foundation reel felt honest, not scripted. That's exactly the tone we wanted — and it outperformed our own ad cut.",
-    author: "Neha Kulkarni",
-    role: "Marketing",
-    brand: "MARS Cosmetics",
+      "The villa tour felt like a friend's recommendation — our DMs filled with stay enquiries the same weekend it went live.",
+    author: "Host",
+    role: "Hospitality",
+    brand: "South Goa villa",
   },
 ];
 

@@ -27,10 +27,10 @@ const coverReels = [
     tilt: "rotate-[0.8deg]",
   },
   {
-    image: "/images/cover-boba.webp",
-    place: "Mumbai",
-    views: "13.5K",
-    href: site.instagram,
+    image: "/images/video-mars.webp",
+    place: "MARS",
+    views: "13.1K",
+    href: "https://www.instagram.com/p/Dd0RtuvBbut/",
     tilt: "-rotate-[0.6deg]",
   },
 ];
@@ -294,7 +294,7 @@ export function Cover() {
                 transition={{ duration: 0.9, delay: 1.05 }}
               >
                 <span className="label text-[8px] text-ink-soft">
-                  Haridwar · Goa · Mumbai
+                  Haridwar · Goa · MARS
                 </span>
                 <a
                   href={site.instagram}
