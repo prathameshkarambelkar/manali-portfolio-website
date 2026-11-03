@@ -1,4 +1,4 @@
-import { ReelCard } from "@/components/ui/ReelCard";
+import { ArcCarousel } from "@/components/ui/ArcCarousel";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { SmoothLink } from "@/components/ui/SmoothLink";
@@ -17,27 +17,25 @@ export function Videos() {
             <h2 className="display-soft mt-4 text-[clamp(2.8rem,5.8vw,5rem)] leading-[0.98]">
               The ones that
               <br />
-              <em className="italic text-clay">travelled.</em>
+              <em className="italic text-clay">landed.</em>
             </h2>
           </div>
           <div className="max-w-xs sm:pb-1">
             <p className="text-sm leading-relaxed text-ink-soft">
-              Top performers and recent brand work — from 793K-view travel
-              films to a gummy ritual, a foundation reel and a South Goa villa.
+              Top performers and recent brand work across travel, beauty and
+              wellness.
             </p>
             <p className="label mt-4 text-[8px] text-ink-soft">
-              Tap a card to watch in-page
+              Drag the arc · tap a reel to watch in-page
             </p>
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
-          {videos.map((video, index) => (
-            <Reveal key={video.title} delay={(index % 4) * 0.05}>
-              <ReelCard video={video} />
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={0.05}>
+          <div className="mt-12">
+            <ArcCarousel videos={videos} />
+          </div>
+        </Reveal>
 
         <Reveal delay={0.1}>
           <div className="mt-10 flex flex-col gap-5 border-t border-ink/15 pt-5 sm:flex-row sm:items-center sm:justify-between">

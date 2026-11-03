@@ -37,7 +37,7 @@ export function Meet() {
                 </div>
                 <figcaption className="mt-4 flex items-baseline justify-between gap-4 border-t border-ink/15 pt-3">
                   <span className="label text-[8px] text-ink-soft">
-                    Manali, off-duty
+                    Off-duty, Mumbai
                   </span>
                   <span className="label text-[8px] text-ink-soft">
                     Mumbai, India
@@ -53,7 +53,7 @@ export function Meet() {
                 Hello, I&apos;m
               </p>
               <h2 className="display-soft mt-1 text-[clamp(2.8rem,5.4vw,4.8rem)] leading-[0.98]">
-                Manali Jagtap<span className="text-clay">.</span>
+                Manali<span className="text-clay">.</span>
               </h2>
             </Reveal>
 
@@ -100,9 +100,8 @@ export function Meet() {
             <Reveal delay={0.3}>
               <div className="mt-8 flex flex-wrap items-end justify-between gap-5">
                 <div>
-                  <p className="script text-4xl">Manali</p>
-                  <p className="label mt-1 text-[8px] text-ink-soft">
-                    Travel · Lifestyle · Stories
+                  <p className="label text-[8px] text-ink-soft">
+                    Travel · Food · Beauty · Lifestyle
                   </p>
                 </div>
                 <button

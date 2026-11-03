@@ -1,18 +1,18 @@
-# Manali Jagtap — Travel & Lifestyle Portfolio
+# Manali Jagtap — Creator Portfolio
 
-A travel/lifestyle portfolio for **Manali Jagtap** — Mumbai-based creator and foodie behind [@manalijagtap_13](https://www.instagram.com/manalijagtap_13/) and [@forking_aroundddd](https://www.instagram.com/forking_aroundddd/).
+A multi-category creator portfolio for **Manali Jagtap** — Mumbai-based creator and foodie behind [@manalijagtap_13](https://www.instagram.com/manalijagtap_13/) and [@forking_aroundddd](https://www.instagram.com/forking_aroundddd/).
 
 Built as a one-page media kit for brands: cover reels, creator portrait, Instagram insights, concept themes, best-performing videos, past partnerships and direct contact actions.
 
-> **Demo note:** photography is placeholder stock. The three brand collab reels (OneGummy, MARS, Casa Regal) are Manali's actual posts and play on-site. The five travel reels currently open a private-preview panel until their video files are added. Brand logos are from Instagram/official sources, and the email/phone are dummy values. Dashboard figures are taken from Manali's Instagram screenshots for the 30 days ending 1 Nov 2026.
+> **Demo note:** photography is placeholder stock. The three brand collab reels (OneGummy, MARS, Casa Regal) are Manali's actual posts and play on-site. The three travel reels in the carousel currently open a private-preview panel until their video files are added. Brand logos are from Instagram/official sources, and the email/phone are dummy values. Dashboard figures are taken from Manali's Instagram screenshots for the 30 days ending 1 Nov 2026.
 
 ## Sections
 
-- **Cover** — Travel Portfolio title, name, Instagram + food handles, three vertical reel thumbnails, stat strip
+- **Cover** — Portfolio title, name, Instagram + food handles, three vertical reel thumbnails, stat strip
 - **01 Meet the creator** — Hello, I'm Manali, bio and an off-duty portrait
 - **02 Insights** — Instagram-style dashboard: views, followers, net followers, viewers, age / top cities / languages, reel-share highlight
-- **03 Concept themes** — Reviews, Unboxing, GRWM, Shopping haul, Travel reels, Stay tours, Café & food
-- **04 Best videos** — eight phone-framed reels with views, brand and content type; in-site player
+- **03 Concept themes** — Reviews, Unboxing, GRWM, Fashion & shopping, Travel reels, Stay tours, Café & food
+- **04 Best videos** — five phone-framed reels in a draggable arc carousel; in-site player
 - **05 Previous partnerships** — real brand logo list with links and collab status, plus a featured Casa Regal stay-tour reel
 - **06 Contact** — Instagram DM, email and WhatsApp actions
 
@@ -20,7 +20,7 @@ Built as a one-page media kit for brands: cover reels, creator portrait, Instagr
 
 - Next.js 16 (App Router) + React 19 + TypeScript
 - Tailwind CSS v4 with a custom cream / teal / terracotta editorial system
-- Motion for reveals, parallax, counters and the reel player
+- Motion for reveals, parallax, counters, the reel player and the arc carousel
 - Lenis for smooth scrolling
 - Bodoni Moda (display), Jost (UI/body), Mrs Saint Delafield (script)
 
@@ -46,9 +46,13 @@ The three live collab reels are served locally from `public/videos/` as both MP4
 | MARS | `mars.mp4` | `mars.webm` | 2s |
 | Casa Regal | `casa-regal.mp4` | `casa-regal.webm` | 6s |
 
-`startAt` in `lib/site.ts` sets the playback offset in seconds. The player never redirects. Reel cards without a local video (the five travel films) open an in-site “full film on request” panel with a contact CTA.
+`startAt` in `lib/site.ts` sets the playback offset in seconds. The player never redirects. Reel cards without a local video (the three travel films) open an in-site “full film on request” panel with a contact CTA.
 
 To make those playable, add their MP4/WebM files to `public/videos/` and add `video`, `webm` and `startAt` to the matching entries in `videos` (`lib/site.ts`).
+
+## Reel arc carousel
+
+The Best Videos section uses a draggable arc carousel of five reels. Cards are positioned on a 15° arc with a radius of four card widths. Drag/swipe horizontally, use the arrow buttons, or focus the carousel and use the left/right arrow keys. The center card is the active reel; tap it to open the in-site player. Edit the `videos` array in `lib/site.ts` to change the five reels.
 
 ## Editing content
 
@@ -58,7 +62,7 @@ Everything is in `lib/site.ts`:
 - `coverStats` — the four numbers on the cover
 - `insights` — dashboard metrics, age brackets, top cities, languages, reel/story views
 - `themes` — the seven concept cards
-- `videos` — best reels: titles, brands, types, view counts, images, local video paths, start times
+- `videos` — the five carousel reels: titles, brands, types, view counts, images, local video paths, start times
 - `moreBrandWork` — the Maybelline in-progress strip
 - `partners` — brand logos, profile links and collab status
 - `navLinks` — navigation
@@ -78,7 +82,7 @@ Update `insights` when new screenshots come in.
 
 ### Placeholders to replace
 
-- **Travel reel videos** — five travel cards need local MP4/WebM files before they can play; currently they show the private-preview panel.
+- **Travel reel videos** — three travel cards need local MP4/WebM files before they can play; currently they show the private-preview panel.
 - **Brand logos** — OneGummy, Maybelline and Casa Regal use their Instagram avatars; MARS uses the official white wordmark. Add approved logo files if the brand teams provide them.
 - **Email and WhatsApp** — `hello@manalijagtap.com` and `+91 98200 00013` are dummy values.
 - **Images** — replace files in `public/images/` (`.webp`) or update image paths in `lib/site.ts`.
@@ -98,8 +102,8 @@ Update `insights` when new screenshots come in.
 app/                 layout, page composition, global styles
 components/sections/ Cover, Meet, Insights, Themes, Videos, Partners, Contact
 components/ui/       Nav, Preloader, PhoneFrame, ReelCard, ReelPlayerProvider,
-                     Cursor, Grain, SmoothScroll, SmoothLink, Marquee, Reveal,
-                     Magnetic, SectionLabel, icons
+                     ArcCarousel, Cursor, Grain, SmoothScroll, SmoothLink,
+                     Marquee, Reveal, Magnetic, SectionLabel, icons
 lib/site.ts          all content and dashboard data
 public/images/       placeholder campaign imagery and brand logos
 public/videos/       local MP4 + WebM reels for in-site playback

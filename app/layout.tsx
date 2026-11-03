@@ -27,24 +27,24 @@ const scriptFace = Mrs_Saint_Delafield({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://manalijagtap.com"),
-  title: "Manali Jagtap — Travel & Lifestyle Creator",
+  title: "Manali Jagtap — Creator Portfolio",
   description:
-    "Mumbai-based travel and lifestyle creator curating journeys you'll feel, not just see. Travel films, stay tours, café features and brand campaigns for travel, hospitality and beauty brands.",
+    "Mumbai-based creator working across travel, food, beauty and lifestyle. Travel films, food features, beauty edits and brand campaigns — with the pacing of a film and the honesty of a friend's recommendation.",
   keywords: [
     "Manali Jagtap",
+    "creator portfolio",
     "travel creator",
-    "travel creator Mumbai",
+    "food creator",
+    "beauty creator",
     "lifestyle influencer",
-    "stay tours",
-    "café content",
-    "Instagram creator",
-    "travel portfolio",
+    "Mumbai creator",
+    "brand content",
   ],
   authors: [{ name: "Manali Jagtap" }],
   openGraph: {
-    title: "Manali Jagtap — Travel & Lifestyle Creator",
+    title: "Manali Jagtap — Creator Portfolio",
     description:
-      "Travel, stays, cafés and beauty content. Based in Mumbai, filming everywhere. 525K views in the last 30 days.",
+      "Travel, food, beauty and lifestyle content. Based in Mumbai, filming everywhere. 525K views in the last 30 days.",
     type: "website",
     url: "https://manalijagtap.com",
     siteName: "Manali Jagtap",
@@ -53,15 +53,15 @@ export const metadata: Metadata = {
         url: "/images/meet-manali.webp",
         width: 900,
         height: 1125,
-        alt: "Manali Jagtap — travel and lifestyle creator",
+        alt: "Manali Jagtap — creator portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Manali Jagtap — Travel & Lifestyle Creator",
+    title: "Manali Jagtap — Creator Portfolio",
     description:
-      "Travel, stays, cafés and beauty content — with the pacing of a film and the honesty of a friend's recommendation.",
+      "Travel, food, beauty and lifestyle content — with the pacing of a film and the honesty of a friend's recommendation.",
     images: ["/images/meet-manali.webp"],
   },
 };

@@ -90,9 +90,9 @@ export function Nav() {
               Manali
             </span>
             <span className="label hidden text-[9px] leading-[1.5] text-ink-soft sm:block">
-              Travel
+              Creator
               <br />
-              Lifestyle
+              Portfolio
             </span>
           </button>
 
@@ -155,9 +155,9 @@ export function Nav() {
             <div className="container-x flex h-full flex-col justify-between py-6">
               <div className="flex items-start justify-between">
                 <div>
-                  <p className="script text-3xl text-paper">Manali</p>
+                  <p className="script text-3xl text-paper">Portfolio</p>
                   <p className="label mt-1 text-[9px] text-paper/50">
-                    The travel edit
+                    The creator edit
                   </p>
                 </div>
                 <button

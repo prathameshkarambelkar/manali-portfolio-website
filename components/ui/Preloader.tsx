@@ -72,25 +72,23 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
       aria-hidden={leaving}
     >
       <div className="flex items-start justify-between">
-        <p className="label">Manali Jagtap</p>
+        <p className="label">Creator</p>
         <p className="label text-right text-ink-soft">
-          Portfolio
-          <br />
           2026
         </p>
       </div>
 
       <div className="relative">
-        <h1 className="display pre-reveal text-[clamp(3.8rem,15vw,13rem)] leading-[0.8]">
-          Manali
+        <h1 className="display pre-reveal text-[clamp(3rem,10vw,9rem)] leading-[0.8]">
+          PORTFOLIO
         </h1>
         <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
           <p className="script text-[clamp(2rem,5vw,4.5rem)] text-wine">
-            the travel edit
+            the creator edit
           </p>
           <p className="mb-2 hidden max-w-[15rem] text-right text-sm leading-relaxed text-ink-soft sm:block">
             A little patience,
-            <br />a lot of wander.
+            <br />a lot of story.
           </p>
         </div>
       </div>
@@ -99,7 +97,7 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
         <div className="flex-1">
           <div className="mb-3 flex items-center justify-between">
             <span className="label text-ink-soft">
-              Travel · Lifestyle
+              Travel · Food
             </span>
             <span className="label text-ink-soft">Mumbai, IN</span>
           </div>

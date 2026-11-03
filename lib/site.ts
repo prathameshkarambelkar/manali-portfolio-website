@@ -3,8 +3,8 @@ export const site = {
   firstName: "Manali",
   handle: "@manalijagtap_13",
   foodHandle: "@forking_aroundddd",
-  role: "Travel & Lifestyle Creator",
-  tagline: "Curating journeys you'll feel, not just see.",
+  role: "Lifestyle & Brand Content Creator",
+  tagline: "Stories that make people stop, save and show up.",
   location: "Mumbai, India",
   email: "hello@manalijagtap.com",
   phoneDisplay: "+91 98200 00013",
@@ -17,7 +17,7 @@ export const site = {
     "I'm Manali — a Mumbai-based travel and lifestyle creator who plans trips around light, food and the stories in between. From Ganga aarti mornings in Haridwar to slow Goa afternoons, I make content that feels like a friend's recommendation.",
     "I create travel, stay, café and beauty content for brands — reviews, stay tours, unboxings and the kind of reels people save for their next trip. And I still get excited about a good window seat.",
   ],
-  tags: ["Travel", "Lifestyle", "Food", "Stays", "Beauty"],
+  tags: ["Travel", "Food", "Beauty", "Lifestyle", "Stays"],
 };
 
 export const coverStats = [
@@ -94,7 +94,7 @@ export const themes: Theme[] = [
   },
   {
     number: "04",
-    title: "Shopping haul",
+    title: "Fashion & shopping",
     description:
       "Try-ons and hauls with styling notes, honest sizing, and the pieces actually worth buying.",
     icon: "bag",
@@ -142,15 +142,6 @@ export type Video = {
  */
 export const videos: Video[] = [
   {
-    title: "Ganga Aarti, Haridwar",
-    brand: "Haridwar",
-    type: "Travel film",
-    views: "793K",
-    image: "/images/cover-aarti.webp",
-    href: site.instagram,
-    top: true,
-  },
-  {
     title: "Rishikesh must-experience",
     brand: "Rishikesh",
     type: "Travel reel",
@@ -167,42 +158,13 @@ export const videos: Video[] = [
     href: site.instagram,
   },
   {
-    title: "Goa beach reel",
-    brand: "Goa",
-    type: "Travel reel",
-    views: "56.2K",
-    image: "/images/video-goa.webp",
+    title: "Ganga Aarti, Haridwar",
+    brand: "Haridwar",
+    type: "Travel film",
+    views: "793K",
+    image: "/images/cover-aarti.webp",
     href: site.instagram,
-  },
-  {
-    title: "Rishikesh diaries",
-    brand: "Rishikesh",
-    type: "Travel diary",
-    views: "49.7K",
-    image: "/images/video-diaries.webp",
-    href: site.instagram,
-  },
-  {
-    title: "Casa Regal villa",
-    brand: "Casa Regal",
-    type: "Stay tour",
-    views: "24.6K",
-    image: "/images/partner-featured.webp",
-    href: "https://www.instagram.com/reel/DXRqGQOCkkK/",
-    video: "/videos/casa-regal.mp4",
-    webm: "/videos/casa-regal.webm",
-    startAt: 6,
-  },
-  {
-    title: "OneGummy biotin",
-    brand: "OneGummy",
-    type: "Wellness content",
-    views: "",
-    image: "/images/video-gummy.webp",
-    href: "https://www.instagram.com/reel/Dc5DnGSzqmT/",
-    video: "/videos/onegummy.mp4",
-    webm: "/videos/onegummy.webm",
-    startAt: 2,
+    top: true,
   },
   {
     title: "MARS foundation",
@@ -213,6 +175,17 @@ export const videos: Video[] = [
     href: "https://www.instagram.com/p/Dd0RtuvBbut/",
     video: "/videos/mars.mp4",
     webm: "/videos/mars.webm",
+    startAt: 2,
+  },
+  {
+    title: "OneGummy biotin",
+    brand: "OneGummy",
+    type: "Wellness content",
+    views: "",
+    image: "/images/video-gummy.webp",
+    href: "https://www.instagram.com/reel/Dc5DnGSzqmT/",
+    video: "/videos/onegummy.mp4",
+    webm: "/videos/onegummy.webm",
     startAt: 2,
   },
 ];

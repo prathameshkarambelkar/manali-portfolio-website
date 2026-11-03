@@ -20,9 +20,12 @@ const coverReels = [
     tilt: "-rotate-[1.5deg]",
   },
   {
-    image: "/images/cover-goa.webp",
-    place: "Goa",
-    views: "56.2K",
+    image: "/images/partner-featured.webp",
+    place: "Casa Regal",
+    views: "24.6K",
+    video: "/videos/casa-regal.mp4",
+    webm: "/videos/casa-regal.webm",
+    startAt: 6,
     tilt: "rotate-[0.8deg]",
   },
   {
@@ -37,10 +40,10 @@ const coverReels = [
 ];
 
 const tickerItems = [
-  "Travel reels",
-  "Stay tours",
-  "Café features",
-  "Unboxings",
+  "Travel stories",
+  "Food features",
+  "Beauty edits",
+  "Fashion hauls",
   "Brand campaigns",
 ];
 
@@ -77,7 +80,7 @@ export function Cover() {
             animate={ready ? { opacity: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.15 }}
           >
-            <p className="label">The Travel Edit — 2026</p>
+            <p className="label">The Creator Edit — 2026</p>
             <p className="label hidden text-ink-soft sm:block">
               Mumbai, India · Available worldwide
             </p>
@@ -92,7 +95,7 @@ export function Cover() {
                 animate={ready ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Travel · Lifestyle · Food
+                Travel · Food · Beauty · Lifestyle
               </motion.p>
 
               <h1 className="mt-4">
@@ -100,22 +103,22 @@ export function Cover() {
                   play={ready}
                   delay={0.22}
                   lines={[
-                    <span key="travel" className="display">
-                      Travel
+                    <span key="portfolio" className="display">
+                      PORTFOLIO
                     </span>,
                   ]}
-                  lineClassName="text-[clamp(4.2rem,10.2vw,8.8rem)] leading-[0.78]"
+                  lineClassName="text-[clamp(3.2rem,7.8vw,7rem)] leading-[0.78]"
                 />
                 <span className="flex flex-wrap items-end gap-x-5">
                   <MaskLines
                     play={ready}
                     delay={0.34}
                     lines={[
-                      <span key="portfolio" className="script text-clay">
-                        Portfolio
+                      <span key="name" className="script text-clay">
+                        Manali Jagtap
                       </span>,
                     ]}
-                    lineClassName="text-[clamp(3.2rem,8.8vw,8rem)] leading-[0.9]"
+                    lineClassName="text-[clamp(2.8rem,6.4vw,5.8rem)] leading-[0.9]"
                   />
                 </span>
               </h1>
@@ -126,9 +129,6 @@ export function Cover() {
                 animate={ready ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.9, delay: 0.6 }}
               >
-                <p className="script text-[2.1rem] leading-none sm:text-[2.6rem]">
-                  Manali Jagtap
-                </p>
                 <a
                   href={site.instagram}
                   target="_blank"
@@ -165,7 +165,7 @@ export function Cover() {
                   {site.tagline}
                 </p>
                 <p className="body-copy mt-3 max-w-[31rem]">
-                  Travel, stays, cafés and beauty content for brands that want to
+                  Travel, food, beauty and lifestyle content for brands that want to
                   feel like a recommendation — not an advertisement.
                 </p>
               </motion.div>
@@ -295,7 +295,7 @@ export function Cover() {
                 transition={{ duration: 0.9, delay: 1.05 }}
               >
                 <span className="label text-[8px] text-ink-soft">
-                  Haridwar · Goa · MARS
+                  Haridwar · Casa Regal · MARS
                 </span>
                 <button
                   type="button"

@@ -47,8 +47,8 @@ export function ReelCard({ video, className = "" }: ReelCardProps) {
               {video.views ? `${video.views} views` : "Brand collab"}
             </span>
             {video.top && (
-              <span className="chip border-gold/40 bg-gold/20 text-[7px] text-gold">
-                Top performer
+              <span className="chip hidden border-gold/40 bg-gold/20 text-[7px] text-gold sm:inline-flex">
+                Top reel
               </span>
             )}
           </div>

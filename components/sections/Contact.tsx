@@ -147,7 +147,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="label text-[7px] text-paper/40">Best for</p>
-                <p className="mt-1 text-sm">Travel, stays, cafés, beauty</p>
+                <p className="mt-1 text-sm">Travel, food, beauty, lifestyle</p>
               </div>
               <div>
                 <p className="label text-[7px] text-paper/40">Response time</p>
