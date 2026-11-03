@@ -74,19 +74,6 @@ export function Cover() {
         className="relative overflow-hidden pb-10 pt-24 sm:pt-28 lg:pb-12 lg:pt-32"
       >
         <div className="container-x">
-          <motion.div
-            className="flex items-center justify-between gap-4 border-b border-ink/15 pb-4"
-            initial={{ opacity: 0 }}
-            animate={ready ? { opacity: 1 } : {}}
-            transition={{ duration: 0.9, delay: 0.15 }}
-          >
-            <p className="label">The Creator Edit — 2026</p>
-            <p className="label hidden text-ink-soft sm:block">
-              Mumbai, India · Available worldwide
-            </p>
-            <p className="label text-ink-soft sm:hidden">Mumbai, IN</p>
-          </motion.div>
-
           <div className="grid gap-10 pt-8 lg:grid-cols-12 lg:gap-8 lg:pt-10">
             <div className="relative z-10 lg:col-span-6">
               <motion.p
