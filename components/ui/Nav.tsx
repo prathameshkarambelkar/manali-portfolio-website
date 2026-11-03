@@ -213,14 +213,14 @@ export function Nav() {
                 >
                   <div className="overflow-hidden">
                     <img
-                      src="/images/intro.webp"
-                      alt="Manali Jagtap on a Goa beach"
+                      src="/images/meet-manali.webp"
+                      alt="Manali Jagtap laughing on a Mumbai road"
                       className="arch h-64 w-full object-cover opacity-90"
                       loading="lazy"
                     />
                   </div>
                   <p className="label mt-4 text-[8px] leading-relaxed text-paper/45">
-                    On set — Bandra,
+                    Off-duty —
                     <br />
                     Mumbai
                   </p>

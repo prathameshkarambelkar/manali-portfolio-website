@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     siteName: "Manali Jagtap",
     images: [
       {
-        url: "/images/intro.webp",
-        width: 1000,
-        height: 1500,
+        url: "/images/meet-manali.webp",
+        width: 900,
+        height: 1125,
         alt: "Manali Jagtap — travel and lifestyle creator",
       },
     ],
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Manali Jagtap — Travel & Lifestyle UGC Creator",
     description:
       "Travel, stays, cafés and product UGC — with the pacing of a film and the honesty of a friend's recommendation.",
-    images: ["/images/intro.webp"],
+    images: ["/images/meet-manali.webp"],
   },
 };
 

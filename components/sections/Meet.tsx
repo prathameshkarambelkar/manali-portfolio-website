@@ -1,8 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Play } from "lucide-react";
-import { PhoneFrame } from "@/components/ui/PhoneFrame";
-import { useReelPlayer } from "@/components/ui/ReelPlayerProvider";
+import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { useLenis } from "@/components/ui/SmoothScroll";
@@ -10,8 +8,6 @@ import { site } from "@/lib/site";
 
 export function Meet() {
   const lenis = useLenis();
-  const { openReel } = useReelPlayer();
-
   const goToVideos = () => {
     const el = document.querySelector("#videos");
     if (!el) return;
@@ -28,75 +24,27 @@ export function Meet() {
         <SectionLabel index="01">Meet the creator</SectionLabel>
 
         <div className="mt-12 grid gap-16 lg:mt-16 lg:grid-cols-12 lg:gap-10">
-          <div className="relative order-2 lg:order-1 lg:col-span-5">
-            <div className="relative mx-auto w-full max-w-[340px]">
-              <Reveal>
-                <PhoneFrame>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      openReel({
-                        title: "Intro film",
-                        brand: "Manali Jagtap",
-                        image: "/images/intro.webp",
-                        duration: "0:42",
-                        type: "Intro film",
-                      })
-                    }
-                    className="group relative block aspect-[9/16] w-full overflow-hidden text-left"
-                    data-cursor="Play intro"
-                    aria-label="Open Manali's intro film"
-                  >
-                    <img
-                      src="/images/intro.webp"
-                      alt="Manali on a Goa beach at sunset"
-                      loading="lazy"
-                      className="grade h-full w-full object-cover transition-transform duration-[1100ms] group-hover:scale-[1.05]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/25" />
-                    <span className="chip absolute left-3 top-7 border-paper/30 bg-ink/25 text-[7px] text-paper backdrop-blur">
-                      Intro film
-                    </span>
-                    <div className="absolute inset-0 grid place-items-center">
-                      <span className="grid size-14 place-items-center rounded-full border border-paper/50 bg-paper/10 text-paper backdrop-blur-sm transition-all duration-500 group-hover:scale-105 group-hover:bg-paper group-hover:text-ink">
-                        <Play className="ml-0.5 size-4 fill-current" />
-                      </span>
-                    </div>
-                    <div className="absolute inset-x-4 bottom-4">
-                      <p className="script text-2xl text-paper">
-                        hi, I&apos;m Manali
-                      </p>
-                      <div className="mt-2 flex items-center justify-between border-t border-paper/20 pt-2">
-                        <span className="label text-[7px] text-paper/60">
-                          Goa, India
-                        </span>
-                        <span className="label text-[7px] text-paper/60">
-                          0:42
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                </PhoneFrame>
-              </Reveal>
-
-              <Reveal delay={0.15}>
-                <div className="absolute -right-4 top-14 w-24 rotate-[7deg] border-4 border-paper bg-paper shadow-[0_16px_40px_-22px_rgba(23,19,16,0.5)] sm:-right-8 sm:w-28">
+          <div className="order-2 lg:order-1 lg:col-span-5">
+            <Reveal>
+              <figure className="mx-auto w-full max-w-[430px]">
+                <div className="border border-ink/15 bg-paper p-2 shadow-[0_30px_70px_-50px_rgba(23,19,16,0.55)]">
                   <img
-                    src="/images/about-detail.webp"
-                    alt="Manali exploring a travel town with a backpack"
-                    className="grade aspect-[4/5] w-full object-cover"
+                    src="/images/meet-manali.webp"
+                    alt="Manali Jagtap laughing and waving on a Mumbai road"
                     loading="lazy"
+                    className="grade aspect-[4/5] w-full object-cover"
                   />
-                  <p className="label px-1.5 py-1.5 text-[6px] text-ink-soft">
-                    somewhere new
-                  </p>
                 </div>
-              </Reveal>
-            </div>
-
-            <p className="label mt-6 text-center text-[8px] text-ink-soft">
-              Intro film — 0:42 · tap to open
-            </p>
+                <figcaption className="mt-4 flex items-baseline justify-between gap-4 border-t border-ink/15 pt-3">
+                  <span className="label text-[8px] text-ink-soft">
+                    Manali, off-duty
+                  </span>
+                  <span className="label text-[8px] text-ink-soft">
+                    Mumbai, India
+                  </span>
+                </figcaption>
+              </figure>
+            </Reveal>
           </div>
 
           <div className="order-1 lg:order-2 lg:col-span-6 lg:col-start-7">
