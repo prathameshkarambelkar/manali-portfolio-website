@@ -44,7 +44,13 @@ export function Partners() {
         </div>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-10">
-          <div className="lg:col-span-7">
+          <div className="order-2 lg:order-1 lg:col-span-7">
+            <div className="mb-3 flex items-center justify-between">
+              <span className="label text-[8px] text-ink-soft">The roster</span>
+              <span className="label text-[8px] text-ink-soft">
+                {String(partners.length).padStart(2, "0")} brands
+              </span>
+            </div>
             <div className="border-t border-ink/15">
               {partners.map((partner, index) => (
                 <Reveal key={partner.name} delay={index * 0.04}>
@@ -119,7 +125,7 @@ export function Partners() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="order-1 lg:order-2 lg:col-span-5">
             <Reveal delay={0.1}>
               <div className="lg:sticky lg:top-28">
                 <button

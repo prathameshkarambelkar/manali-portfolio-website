@@ -15,9 +15,9 @@ export const site = {
   availability: "Open for collaborations · 2026",
   bio: [
     "I'm Manali — a Mumbai-based travel and lifestyle creator who plans trips around light, food and the stories in between. From Ganga aarti mornings in Haridwar to slow Goa afternoons, I make content that feels like a friend's recommendation.",
-    "I create UGC for travel, stays, cafés and beauty brands — reviews, stay tours, unboxings and the kind of reels people save for their next trip. And I still get excited about a good window seat.",
+    "I create travel, stay, café and beauty content for brands — reviews, stay tours, unboxings and the kind of reels people save for their next trip. And I still get excited about a good window seat.",
   ],
-  tags: ["Travel", "Lifestyle", "Food", "Stays", "UGC"],
+  tags: ["Travel", "Lifestyle", "Food", "Stays", "Beauty"],
 };
 
 export const coverStats = [
@@ -196,7 +196,7 @@ export const videos: Video[] = [
   {
     title: "OneGummy biotin",
     brand: "OneGummy",
-    type: "Wellness UGC",
+    type: "Wellness content",
     views: "",
     image: "/images/video-gummy.webp",
     href: "https://www.instagram.com/reel/Dc5DnGSzqmT/",
@@ -207,7 +207,7 @@ export const videos: Video[] = [
   {
     title: "MARS foundation",
     brand: "MARS Cosmetics",
-    type: "Beauty UGC",
+    type: "Beauty content",
     views: "13.1K",
     image: "/images/video-mars.webp",
     href: "https://www.instagram.com/p/Dd0RtuvBbut/",

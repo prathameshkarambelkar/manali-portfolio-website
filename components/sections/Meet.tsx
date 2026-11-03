@@ -24,7 +24,7 @@ export function Meet() {
         <SectionLabel index="01">Meet the creator</SectionLabel>
 
         <div className="mt-12 grid gap-16 lg:mt-16 lg:grid-cols-12 lg:gap-10">
-          <div className="order-2 lg:order-1 lg:col-span-5">
+          <div className="lg:col-span-5">
             <Reveal>
               <figure className="mx-auto w-full max-w-[430px]">
                 <div className="border border-ink/15 bg-paper p-2 shadow-[0_30px_70px_-50px_rgba(23,19,16,0.55)]">
@@ -47,7 +47,7 @@ export function Meet() {
             </Reveal>
           </div>
 
-          <div className="order-1 lg:order-2 lg:col-span-6 lg:col-start-7">
+          <div className="lg:col-span-6 lg:col-start-7">
             <Reveal>
               <p className="script text-[clamp(2rem,3.4vw,2.9rem)] text-clay">
                 Hello, I&apos;m
@@ -102,7 +102,7 @@ export function Meet() {
                 <div>
                   <p className="script text-4xl">Manali</p>
                   <p className="label mt-1 text-[8px] text-ink-soft">
-                    Travel · Lifestyle · UGC
+                    Travel · Lifestyle · Stories
                   </p>
                 </div>
                 <button

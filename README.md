@@ -1,6 +1,6 @@
-# Manali Jagtap — UGC Portfolio
+# Manali Jagtap — Travel & Lifestyle Portfolio
 
-A travel/lifestyle UGC portfolio for **Manali Jagtap** — Mumbai-based creator and foodie behind [@manalijagtap_13](https://www.instagram.com/manalijagtap_13/) and [@forking_aroundddd](https://www.instagram.com/forking_aroundddd/).
+A travel/lifestyle portfolio for **Manali Jagtap** — Mumbai-based creator and foodie behind [@manalijagtap_13](https://www.instagram.com/manalijagtap_13/) and [@forking_aroundddd](https://www.instagram.com/forking_aroundddd/).
 
 Built as a one-page media kit for brands: cover reels, creator portrait, Instagram insights, concept themes, best-performing videos, past partnerships and direct contact actions.
 
@@ -8,7 +8,7 @@ Built as a one-page media kit for brands: cover reels, creator portrait, Instagr
 
 ## Sections
 
-- **Cover** — UGC Portfolio title, name, Instagram + food handles, three vertical reel thumbnails, stat strip
+- **Cover** — Travel Portfolio title, name, Instagram + food handles, three vertical reel thumbnails, stat strip
 - **01 Meet the creator** — Hello, I'm Manali, bio and an off-duty portrait
 - **02 Insights** — Instagram-style dashboard: views, followers, net followers, viewers, age / top cities / languages, reel-share highlight
 - **03 Concept themes** — Reviews, Unboxing, GRWM, Shopping haul, Travel reels, Stay tours, Café & food

@@ -92,7 +92,7 @@ export function Nav() {
             <span className="label hidden text-[9px] leading-[1.5] text-ink-soft sm:block">
               Travel
               <br />
-              UGC
+              Lifestyle
             </span>
           </button>
 

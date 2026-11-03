@@ -41,7 +41,7 @@ const tickerItems = [
   "Stay tours",
   "Café features",
   "Unboxings",
-  "UGC campaigns",
+  "Brand campaigns",
 ];
 
 export function Cover() {
@@ -77,7 +77,7 @@ export function Cover() {
             animate={ready ? { opacity: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.15 }}
           >
-            <p className="label">UGC Portfolio — 2026</p>
+            <p className="label">The Travel Edit — 2026</p>
             <p className="label hidden text-ink-soft sm:block">
               Mumbai, India · Available worldwide
             </p>
@@ -92,7 +92,7 @@ export function Cover() {
                 animate={ready ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Travel · Lifestyle · UGC
+                Travel · Lifestyle · Food
               </motion.p>
 
               <h1 className="mt-4">
@@ -100,11 +100,11 @@ export function Cover() {
                   play={ready}
                   delay={0.22}
                   lines={[
-                    <span key="ugc" className="display">
-                      UGC
+                    <span key="travel" className="display">
+                      Travel
                     </span>,
                   ]}
-                  lineClassName="text-[clamp(5.5rem,14.5vw,12.5rem)] leading-[0.78]"
+                  lineClassName="text-[clamp(4.2rem,10.2vw,8.8rem)] leading-[0.78]"
                 />
                 <span className="flex flex-wrap items-end gap-x-5">
                   <MaskLines
@@ -165,7 +165,7 @@ export function Cover() {
                   {site.tagline}
                 </p>
                 <p className="body-copy mt-3 max-w-[31rem]">
-                  Travel, stays, cafés and product UGC for brands that want to
+                  Travel, stays, cafés and beauty content for brands that want to
                   feel like a recommendation — not an advertisement.
                 </p>
               </motion.div>

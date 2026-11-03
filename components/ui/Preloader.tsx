@@ -99,7 +99,7 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
         <div className="flex-1">
           <div className="mb-3 flex items-center justify-between">
             <span className="label text-ink-soft">
-              Travel · Lifestyle · UGC
+              Travel · Lifestyle
             </span>
             <span className="label text-ink-soft">Mumbai, IN</span>
           </div>

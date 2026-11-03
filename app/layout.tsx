@@ -27,24 +27,24 @@ const scriptFace = Mrs_Saint_Delafield({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://manalijagtap.com"),
-  title: "Manali Jagtap — Travel & Lifestyle UGC Creator",
+  title: "Manali Jagtap — Travel & Lifestyle Creator",
   description:
-    "Mumbai-based travel and lifestyle creator curating journeys you'll feel, not just see. UGC, stay tours, café features and brand campaigns for travel, hospitality and beauty brands.",
+    "Mumbai-based travel and lifestyle creator curating journeys you'll feel, not just see. Travel films, stay tours, café features and brand campaigns for travel, hospitality and beauty brands.",
   keywords: [
     "Manali Jagtap",
-    "UGC creator",
+    "travel creator",
     "travel creator Mumbai",
     "lifestyle influencer",
     "stay tours",
     "café content",
     "Instagram creator",
-    "UGC portfolio",
+    "travel portfolio",
   ],
   authors: [{ name: "Manali Jagtap" }],
   openGraph: {
-    title: "Manali Jagtap — Travel & Lifestyle UGC Creator",
+    title: "Manali Jagtap — Travel & Lifestyle Creator",
     description:
-      "Travel, stays, cafés and product UGC. Based in Mumbai, filming everywhere. 525K views in the last 30 days.",
+      "Travel, stays, cafés and beauty content. Based in Mumbai, filming everywhere. 525K views in the last 30 days.",
     type: "website",
     url: "https://manalijagtap.com",
     siteName: "Manali Jagtap",
@@ -59,9 +59,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Manali Jagtap — Travel & Lifestyle UGC Creator",
+    title: "Manali Jagtap — Travel & Lifestyle Creator",
     description:
-      "Travel, stays, cafés and product UGC — with the pacing of a film and the honesty of a friend's recommendation.",
+      "Travel, stays, cafés and beauty content — with the pacing of a film and the honesty of a friend's recommendation.",
     images: ["/images/meet-manali.webp"],
   },
 };
