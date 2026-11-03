@@ -4,6 +4,7 @@ import { motion, useInView } from "motion/react";
 import {
   CalendarDays,
   Eye,
+  Play,
   Sparkles,
   UserPlus,
   Users,
@@ -40,9 +41,9 @@ const metrics: Metric[] = [
     Icon: UserPlus,
   },
   {
-    label: "Non-follower views",
-    value: insights.nonFollowerViews,
-    note: insights.nonFollowerPct + " of views",
+    label: "Viewers",
+    value: insights.viewers,
+    note: "unique accounts",
     Icon: Eye,
   },
 ];
@@ -159,7 +160,7 @@ export function Insights() {
                           />
                         </div>
                         <span className="text-right text-[10px] tabular-nums text-ink-soft">
-                          {row.value}%
+                          {row.value.toFixed(1)}%
                         </span>
                       </div>
                     ))}
@@ -168,9 +169,9 @@ export function Insights() {
 
                 <div className="lg:col-span-4">
                   <div className="flex items-baseline justify-between">
-                    <h3 className="label text-[9px]">Top locations</h3>
-                    <span className="label text-[7px] text-ink-soft">
-                      % of audience
+                    <h3 className="label text-[9px]">Top cities</h3>
+                    <span className="label text-[6px] text-ink-soft sm:text-[7px]">
+                      India {insights.indiaShare}
                     </span>
                   </div>
                   <div className="mt-5 space-y-3.5">
@@ -196,10 +197,47 @@ export function Insights() {
                           />
                         </div>
                         <span className="text-right text-[10px] tabular-nums text-ink-soft">
-                          {row.value}%
+                          {row.value.toFixed(1)}%
                         </span>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="mt-6 border-t border-ink/10 pt-5">
+                    <div className="flex items-baseline justify-between">
+                      <h3 className="label text-[9px]">Top languages</h3>
+                      <span className="label text-[7px] text-ink-soft">
+                        % of audience
+                      </span>
+                    </div>
+                    <div className="mt-4 space-y-3">
+                      {insights.languages.map((row, index) => (
+                        <div
+                          key={row.label}
+                          className="grid grid-cols-[4.5rem_1fr_2.1rem] items-center gap-2.5"
+                        >
+                          <span className="text-[11px] text-ink-soft">
+                            {row.label}
+                          </span>
+                          <div className="h-1.5 w-full overflow-hidden bg-ink/10">
+                            <motion.div
+                              className="h-full origin-left bg-gold"
+                              style={{ width: `${row.value}%` }}
+                              initial={{ scaleX: 0 }}
+                              animate={{ scaleX: barsInView ? 1 : 0 }}
+                              transition={{
+                                duration: 1,
+                                delay: (index + 5) * 0.07,
+                                ease: [0.16, 1, 0.3, 1],
+                              }}
+                            />
+                          </div>
+                          <span className="text-right text-[10px] tabular-nums text-ink-soft">
+                            {row.value.toFixed(1)}%
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
@@ -214,7 +252,7 @@ export function Insights() {
                     >
                       <div className="grid size-[72%] place-items-center rounded-full bg-paper text-center">
                         <div>
-                          <p className="display text-2xl leading-none">
+                          <p className="display text-xl leading-none">
                             {insights.gender.women}%
                           </p>
                           <p className="label mt-1 text-[6px] text-ink-soft">
@@ -288,19 +326,26 @@ export function Insights() {
 
               <div className="flex flex-col justify-between border border-ink/10 bg-paper-2/25 p-6">
                 <div className="flex items-start justify-between gap-3">
-                  <p className="label text-[8px] text-ink-soft">
-                    Non-follower views
-                  </p>
-                  <Eye className="size-4 text-teal/60" strokeWidth={1.4} />
+                  <p className="label text-[8px] text-ink-soft">Reel share</p>
+                  <Play className="size-4 text-teal/60" strokeWidth={1.4} />
                 </div>
                 <div className="mt-6">
                   <p className="display text-[clamp(2rem,3.2vw,2.6rem)] leading-none">
-                    {insights.nonFollowerPct}
+                    {insights.reelShare}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                    of views came from people who don&apos;t follow yet — new
-                    eyes on every reel.
+                    of all views came from reels this month.
                   </p>
+                </div>
+                <div className="mt-5 grid grid-cols-2 gap-2 border-t border-ink/10 pt-3">
+                  {insights.viewsByType.map((row) => (
+                    <div key={row.label}>
+                      <p className="display text-lg leading-none">{row.value}</p>
+                      <p className="label mt-1 text-[6px] text-ink-soft">
+                        {row.label}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

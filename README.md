@@ -4,14 +4,14 @@ A travel/lifestyle UGC portfolio for **Manali Jagtap** — Mumbai-based creator 
 
 Built as a one-page media kit for brands: cover reels, creator intro, Instagram insights, reach statement, concept themes, best-performing videos, circle stats, past partnerships and direct contact actions.
 
-> **Demo note:** photography is placeholder stock. The three brand collab reels (OneGummy, MARS, Casa Regal) are Manali's actual posts and play on-site. The intro film and five travel reels currently open a private-preview panel until their video files are added. Brand logos are from Instagram/official sources, and the email/phone are dummy values. Replace the sample demographics and engagement rate before launch.
+> **Demo note:** photography is placeholder stock. The three brand collab reels (OneGummy, MARS, Casa Regal) are Manali's actual posts and play on-site. The intro film and five travel reels currently open a private-preview panel until their video files are added. Brand logos are from Instagram/official sources, and the email/phone are dummy values. Dashboard figures are taken from Manali's Instagram screenshots for the 30 days ending 1 Nov 2026.
 
 ## Sections
 
 - **Cover** — UGC Portfolio title, name, Instagram + food handles, three vertical reel thumbnails, stat strip
 - **01 Meet the creator** — Hello, I'm Manali, bio, vertical intro film
-- **02 Insights** — Instagram-style dashboard: views, followers, net followers, non-follower views, age / locations / gender, highlight badge
-- **03 Audience reach** — 525K views in 30 days statement slide
+- **02 Insights** — Instagram-style dashboard: views, followers, net followers, viewers, age / top cities / languages / gender, reel-share highlight
+- **03 Audience reach** — 525K views in 30 days, with reel views and unique viewers
 - **04 Concept themes** — Reviews, Unboxing, GRWM, Shopping haul, Travel reels, Stay tours, Café & food
 - **05 Best videos** — eight phone-framed reels with views, brand and content type; in-site player
 - **06 Key stats** — four circular badges
@@ -58,7 +58,7 @@ Everything is in `lib/site.ts`:
 
 - `site` — name, handles, tagline, bio, location, email, phone, availability
 - `coverStats` — the four numbers on the cover
-- `insights` — dashboard metrics, age brackets, locations, gender split
+- `insights` — dashboard metrics, age brackets, top cities, languages, gender split, reel/story views
 - `themes` — the seven concept cards
 - `videos` — best reels: titles, brands, types, view counts, images, local video paths, start times
 - `moreBrandWork` — the Maybelline in-progress strip
@@ -66,11 +66,23 @@ Everything is in `lib/site.ts`:
 - `partners` — brand logos, profile links and collab status
 - `navLinks` — navigation
 
+### Dashboard data
+
+Figures are from Manali's Instagram dashboard for the 30 days ending 1 Nov 2026:
+
+- **525,140 views** · **3,357 followers** · **+95 net followers** · **373,659 viewers**
+- **510K reel views** (97% of all views) · **7.4K story views**
+- **39.1% women / 60.9% men**
+- Age: 13–17 1.0%, 18–24 22.1%, 25–34 43.3%, 35–44 20.4%, 45–54 9.1%, 55–64 3.1%, 65+ 1.0%
+- Top cities: Mumbai 8.1%, Panvel 7.5%, Navi Mumbai 4.8%, Thane 2.3%, Delhi 2.0%
+- Languages: English 68.0%, Hindi 6.8%, Marathi 6.7%
+- India accounts for 58.9% of the audience
+
+Update `insights` and `keyStats` when new screenshots come in.
+
 ### Placeholders to replace
 
 - **Travel reel videos** — five travel cards and the intro film need local MP4/WebM files before they can play; currently they show the private-preview panel.
-- **Insights demographics** — age/location/gender percentages are sample values; replace with screenshots or real numbers.
-- **Engagement rate** — `keyStats` uses 9.2% as a placeholder.
 - **Brand logos** — OneGummy, Maybelline and Casa Regal use their Instagram avatars; MARS uses the official white wordmark. Add approved logo files if the brand teams provide them.
 - **Email and WhatsApp** — `hello@manalijagtap.com` and `+91 98200 00013` are dummy values.
 - **Images** — replace files in `public/images/` (`.webp`) or update image paths in `lib/site.ts`.
@@ -93,8 +105,8 @@ components/sections/ Cover, Meet, Insights, Reach, Themes, Videos,
 components/ui/       Nav, Preloader, PhoneFrame, ReelCard, ReelPlayerProvider,
                      Cursor, Grain, SmoothScroll, SmoothLink, Marquee, Reveal,
                      Magnetic, SectionLabel, icons
-lib/site.ts          all content and placeholder data
-public/images/       dummy campaign imagery and brand logos
+lib/site.ts          all content and dashboard data
+public/images/       placeholder campaign imagery and brand logos
 public/videos/       local MP4 + WebM reels for in-site playback
 ```
 

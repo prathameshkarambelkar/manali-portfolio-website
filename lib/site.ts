@@ -29,28 +29,40 @@ export const coverStats = [
 
 export const insights = {
   period: "Last 30 days",
-  views: "525K",
+  views: "525,140",
   followers: "3,357",
   netFollowers: "+95",
-  nonFollowerViews: "486K",
-  nonFollowerPct: "92.6%",
-  profileVisits: "3.1K",
+  viewers: "373,659",
+  reelViews: "510K",
+  reelShare: "97%",
   dailyAverage: "17.5K",
+  indiaShare: "58.9%",
   age: [
-    { label: "13–17", value: 3 },
-    { label: "18–24", value: 28 },
-    { label: "25–34", value: 52 },
-    { label: "35–44", value: 13 },
-    { label: "45+", value: 4 },
+    { label: "13–17", value: 1.0 },
+    { label: "18–24", value: 22.1 },
+    { label: "25–34", value: 43.3 },
+    { label: "35–44", value: 20.4 },
+    { label: "45–54", value: 9.1 },
+    { label: "55–64", value: 3.1 },
+    { label: "65+", value: 1.0 },
   ],
   locations: [
-    { label: "Mumbai", value: 38 },
-    { label: "Pune", value: 16 },
-    { label: "Delhi NCR", value: 9 },
-    { label: "Bengaluru", value: 7 },
-    { label: "Rest of India", value: 30 },
+    { label: "Mumbai", value: 8.1 },
+    { label: "Panvel", value: 7.5 },
+    { label: "Navi Mumbai", value: 4.8 },
+    { label: "Thane", value: 2.3 },
+    { label: "Delhi", value: 2.0 },
   ],
-  gender: { women: 71, men: 29 },
+  languages: [
+    { label: "English", value: 68.0 },
+    { label: "Hindi", value: 6.8 },
+    { label: "Marathi", value: 6.7 },
+  ],
+  gender: { women: 39.1, men: 60.9 },
+  viewsByType: [
+    { label: "Reels", value: "510K" },
+    { label: "Stories", value: "7.4K" },
+  ],
 };
 
 export type Theme = {
@@ -215,7 +227,7 @@ export const keyStats = [
   { value: "525K", label: "views in 30 days", note: "Instagram Insights" },
   { value: "793K", label: "top reel", note: "Ganga Aarti, Haridwar" },
   { value: "3,357", label: "followers", note: "and growing" },
-  { value: "9.2%", label: "engagement rate", note: "last 30 days" },
+  { value: "510K", label: "reel views", note: "97% of all views" },
 ];
 
 export type Partner = {

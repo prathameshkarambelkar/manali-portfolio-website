@@ -64,18 +64,18 @@ export function Reach() {
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-paper/15 pt-5">
               <div>
                 <p className="display text-2xl leading-none">
-                  {insights.nonFollowerPct}
+                  {insights.reelViews}
                 </p>
                 <p className="label mt-2 text-[7px] text-paper/45">
-                  non-follower views
+                  reel views
                 </p>
               </div>
               <div>
                 <p className="display text-2xl leading-none">
-                  {insights.profileVisits}
+                  {insights.viewers}
                 </p>
                 <p className="label mt-2 text-[7px] text-paper/45">
-                  profile visits
+                  unique viewers
                 </p>
               </div>
               <div>
