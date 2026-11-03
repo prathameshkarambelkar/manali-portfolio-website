@@ -27,7 +27,7 @@ export function Partners() {
       <div className="container-x">
         <div className="grid gap-8 border-t border-ink/15 pt-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <SectionLabel index="07">Previous partnerships</SectionLabel>
+            <SectionLabel index="05">Previous partnerships</SectionLabel>
             <h2 className="display-soft mt-4 text-[clamp(2.6rem,5.4vw,4.6rem)] leading-[0.98]">
               Brands I&apos;ve
               <br />

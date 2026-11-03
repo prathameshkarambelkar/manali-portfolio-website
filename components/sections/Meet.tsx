@@ -65,16 +65,6 @@ export function Meet() {
               ))}
             </div>
 
-            <Reveal delay={0.22}>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {site.tags.map((tag) => (
-                  <span key={tag} className="chip text-[8px]">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </Reveal>
-
             <Reveal delay={0.26}>
               <dl className="mt-8 border-t border-ink/15">
                 <div className="flex items-baseline justify-between gap-6 border-b border-ink/10 py-3">

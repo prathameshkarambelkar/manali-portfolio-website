@@ -33,7 +33,6 @@ export const insights = {
   followers: "3,357",
   netFollowers: "+95",
   viewers: "373,659",
-  reelViews: "510K",
   reelShare: "97%",
   dailyAverage: "17.5K",
   indiaShare: "58.9%",
@@ -58,7 +57,6 @@ export const insights = {
     { label: "Hindi", value: 6.8 },
     { label: "Marathi", value: 6.7 },
   ],
-  gender: { women: 39.1, men: 60.9 },
   viewsByType: [
     { label: "Reels", value: "510K" },
     { label: "Stories", value: "7.4K" },
@@ -221,13 +219,6 @@ export const videos: Video[] = [
 
 export const moreBrandWork = [
   { brand: "Maybelline New York", views: "Collab in progress" },
-];
-
-export const keyStats = [
-  { value: "525K", label: "views in 30 days", note: "Instagram Insights" },
-  { value: "793K", label: "top reel", note: "Ganga Aarti, Haridwar" },
-  { value: "3,357", label: "followers", note: "and growing" },
-  { value: "510K", label: "reel views", note: "97% of all views" },
 ];
 
 export type Partner = {

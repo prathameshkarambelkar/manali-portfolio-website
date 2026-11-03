@@ -2,7 +2,7 @@
 
 A travel/lifestyle UGC portfolio for **Manali Jagtap** — Mumbai-based creator and foodie behind [@manalijagtap_13](https://www.instagram.com/manalijagtap_13/) and [@forking_aroundddd](https://www.instagram.com/forking_aroundddd/).
 
-Built as a one-page media kit for brands: cover reels, creator portrait, Instagram insights, reach statement, concept themes, best-performing videos, circle stats, past partnerships and direct contact actions.
+Built as a one-page media kit for brands: cover reels, creator portrait, Instagram insights, concept themes, best-performing videos, past partnerships and direct contact actions.
 
 > **Demo note:** photography is placeholder stock. The three brand collab reels (OneGummy, MARS, Casa Regal) are Manali's actual posts and play on-site. The five travel reels currently open a private-preview panel until their video files are added. Brand logos are from Instagram/official sources, and the email/phone are dummy values. Dashboard figures are taken from Manali's Instagram screenshots for the 30 days ending 1 Nov 2026.
 
@@ -10,13 +10,11 @@ Built as a one-page media kit for brands: cover reels, creator portrait, Instagr
 
 - **Cover** — UGC Portfolio title, name, Instagram + food handles, three vertical reel thumbnails, stat strip
 - **01 Meet the creator** — Hello, I'm Manali, bio and an off-duty portrait
-- **02 Insights** — Instagram-style dashboard: views, followers, net followers, viewers, age / top cities / languages / gender, reel-share highlight
-- **03 Audience reach** — 525K views in 30 days, with reel views and unique viewers
-- **04 Concept themes** — Reviews, Unboxing, GRWM, Shopping haul, Travel reels, Stay tours, Café & food
-- **05 Best videos** — eight phone-framed reels with views, brand and content type; in-site player
-- **06 Key stats** — four circular badges
-- **07 Previous partnerships** — real brand logo list with links and collab status, plus a featured Casa Regal stay-tour reel
-- **08 Contact** — Instagram DM, email and WhatsApp actions
+- **02 Insights** — Instagram-style dashboard: views, followers, net followers, viewers, age / top cities / languages, reel-share highlight
+- **03 Concept themes** — Reviews, Unboxing, GRWM, Shopping haul, Travel reels, Stay tours, Café & food
+- **04 Best videos** — eight phone-framed reels with views, brand and content type; in-site player
+- **05 Previous partnerships** — real brand logo list with links and collab status, plus a featured Casa Regal stay-tour reel
+- **06 Contact** — Instagram DM, email and WhatsApp actions
 
 ## Stack
 
@@ -58,11 +56,10 @@ Everything is in `lib/site.ts`:
 
 - `site` — name, handles, tagline, bio, location, email, phone, availability
 - `coverStats` — the four numbers on the cover
-- `insights` — dashboard metrics, age brackets, top cities, languages, gender split, reel/story views
+- `insights` — dashboard metrics, age brackets, top cities, languages, reel/story views
 - `themes` — the seven concept cards
 - `videos` — best reels: titles, brands, types, view counts, images, local video paths, start times
 - `moreBrandWork` — the Maybelline in-progress strip
-- `keyStats` — the four circle badges
 - `partners` — brand logos, profile links and collab status
 - `navLinks` — navigation
 
@@ -72,13 +69,12 @@ Figures are from Manali's Instagram dashboard for the 30 days ending 1 Nov 2026:
 
 - **525,140 views** · **3,357 followers** · **+95 net followers** · **373,659 viewers**
 - **510K reel views** (97% of all views) · **7.4K story views**
-- **39.1% women / 60.9% men**
 - Age: 13–17 1.0%, 18–24 22.1%, 25–34 43.3%, 35–44 20.4%, 45–54 9.1%, 55–64 3.1%, 65+ 1.0%
 - Top cities: Mumbai 8.1%, Panvel 7.5%, Navi Mumbai 4.8%, Thane 2.3%, Delhi 2.0%
 - Languages: English 68.0%, Hindi 6.8%, Marathi 6.7%
 - India accounts for 58.9% of the audience
 
-Update `insights` and `keyStats` when new screenshots come in.
+Update `insights` when new screenshots come in.
 
 ### Placeholders to replace
 
@@ -100,8 +96,7 @@ Update `insights` and `keyStats` when new screenshots come in.
 
 ```
 app/                 layout, page composition, global styles
-components/sections/ Cover, Meet, Insights, Reach, Themes, Videos,
-                     KeyStats, Partners, Contact, Footer
+components/sections/ Cover, Meet, Insights, Themes, Videos, Partners, Contact
 components/ui/       Nav, Preloader, PhoneFrame, ReelCard, ReelPlayerProvider,
                      Cursor, Grain, SmoothScroll, SmoothLink, Marquee, Reveal,
                      Magnetic, SectionLabel, icons

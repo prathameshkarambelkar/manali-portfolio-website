@@ -130,7 +130,7 @@ export function Insights() {
                 ref={barsRef}
                 className="mt-8 grid gap-8 border-t border-ink/10 pt-7 lg:grid-cols-12 lg:gap-10"
               >
-                <div className="lg:col-span-5">
+                <div className="lg:col-span-6">
                   <div className="flex items-baseline justify-between">
                     <h3 className="label text-[9px]">Age range</h3>
                     <span className="label text-[7px] text-ink-soft">
@@ -167,7 +167,7 @@ export function Insights() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-4">
+                <div className="lg:col-span-6">
                   <div className="flex items-baseline justify-between">
                     <h3 className="label text-[9px]">Top cities</h3>
                     <span className="label text-[6px] text-ink-soft sm:text-[7px]">
@@ -241,51 +241,7 @@ export function Insights() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-3">
-                  <h3 className="label text-[9px]">Gender split</h3>
-                  <div className="mt-5 flex items-center gap-5">
-                    <div
-                      className="relative grid size-28 shrink-0 place-items-center rounded-full"
-                      style={{
-                        background: `conic-gradient(var(--color-clay) 0 ${insights.gender.women}%, var(--color-teal) ${insights.gender.women}% 100%)`,
-                      }}
-                    >
-                      <div className="grid size-[72%] place-items-center rounded-full bg-paper text-center">
-                        <div>
-                          <p className="display text-xl leading-none">
-                            {insights.gender.women}%
-                          </p>
-                          <p className="label mt-1 text-[6px] text-ink-soft">
-                            women
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="space-y-3">
-                      <div>
-                        <span className="flex items-center gap-2 text-[11px]">
-                          <span className="size-2 rounded-full bg-clay" />
-                          Women
-                          <span className="text-ink-soft">
-                            {insights.gender.women}%
-                          </span>
-                        </span>
-                      </div>
-                      <div>
-                        <span className="flex items-center gap-2 text-[11px]">
-                          <span className="size-2 rounded-full bg-teal" />
-                          Men
-                          <span className="text-ink-soft">
-                            {insights.gender.men}%
-                          </span>
-                        </span>
-                      </div>
-                      <p className="max-w-[8rem] text-[10px] leading-relaxed text-ink-soft">
-                        Mostly 25–34, planning their next trip or table.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
 

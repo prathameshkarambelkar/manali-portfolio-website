@@ -13,7 +13,7 @@ export function Videos() {
       <div className="container-x">
         <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
           <div>
-            <SectionLabel index="05">Best videos</SectionLabel>
+            <SectionLabel index="04">Best videos</SectionLabel>
             <h2 className="display-soft mt-4 text-[clamp(2.8rem,5.8vw,5rem)] leading-[0.98]">
               The ones that
               <br />

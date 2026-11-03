@@ -28,7 +28,7 @@ export function Themes() {
       <div className="container-x">
         <div className="grid gap-8 border-t border-ink/15 pt-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <SectionLabel index="04">Concept themes</SectionLabel>
+            <SectionLabel index="03">Concept themes</SectionLabel>
             <h2 className="display-soft mt-4 text-[clamp(2.8rem,5.8vw,5rem)] leading-[0.98]">
               What I make,
               <br />
