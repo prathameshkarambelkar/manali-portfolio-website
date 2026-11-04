@@ -127,7 +127,7 @@ export function Partners() {
 
           <div className="order-1 lg:order-2 lg:col-span-5">
             <Reveal delay={0.1}>
-              <div className="lg:sticky lg:top-28">
+              <div className="mx-auto w-full max-w-[260px] sm:max-w-[300px] lg:sticky lg:top-28">
                 <button
                   type="button"
                   onClick={openCasaRegal}
@@ -179,7 +179,7 @@ export function Partners() {
                     </div>
                   </PhoneFrame>
                 </button>
-                <div className="mt-4 flex items-center justify-between gap-3">
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
                   <p className="text-xs text-ink-soft">
                     Featured collaboration — Casa Regal, 2026
                   </p>
