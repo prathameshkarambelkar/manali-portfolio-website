@@ -1,10 +1,10 @@
 # Manali Jagtap — Creator Portfolio
 
-A multi-category creator portfolio for **Manali Jagtap** — Mumbai-based creator and foodie behind [@manalijagtap_13](https://www.instagram.com/manalijagtap_13/) and [@forking_aroundddd](https://www.instagram.com/forking_aroundddd/).
+A multi-category creator portfolio for **Manali Jagtap** — Mumbai-based creator and foodie behind [@manalijagtap_13](https://www.instagram.com/manalijagtap_13/) and [@forking_arounddd](https://www.instagram.com/forking_arounddd/).
 
 Built as a one-page media kit for brands: cover reels, creator portrait, Instagram insights, concept themes, best-performing videos, past partnerships and direct contact actions.
 
-> **Demo note:** photography is placeholder stock. The three brand collab reels (OneGummy, MARS, Casa Regal) are Manali's actual posts and play on-site. The three travel reels in the carousel currently open a private-preview panel until their video files are added. Brand logos are from Instagram/official sources, and the email/phone are dummy values. Dashboard figures are taken from Manali's Instagram screenshots for the 30 days ending 1 Nov 2026.
+> **Demo note:** photography is placeholder stock. The three brand collab reels (OneGummy, MARS, Casa Regal) are Manali's actual posts and play on-site. The three travel reels in the carousel currently open a private-preview panel until their video files are added. Brand logos are from Instagram/official sources. Dashboard figures are taken from Manali's Instagram screenshots for the 30 days ending 1 Nov 2026.
 
 ## Sections
 
@@ -84,7 +84,6 @@ Update `insights` when new screenshots come in.
 
 - **Travel reel videos** — three travel cards need local MP4/WebM files before they can play; currently they show the private-preview panel.
 - **Brand logos** — OneGummy, Maybelline and Casa Regal use their Instagram avatars; MARS uses the official white wordmark. Add approved logo files if the brand teams provide them.
-- **Email and WhatsApp** — `hello@manalijagtap.com` and `+91 98200 00013` are dummy values.
 - **Images** — replace files in `public/images/` (`.webp`) or update image paths in `lib/site.ts`.
 
 ## Partnerships

@@ -169,6 +169,12 @@ export function Footer() {
               {site.email}
             </a>
             <a
+              href={`tel:+${site.phone}`}
+              className="mt-2 block w-fit text-xs text-paper/55 transition-colors hover:text-paper"
+            >
+              {site.phoneDisplay}
+            </a>
+            <a
               href={site.instagram}
               target="_blank"
               rel="noreferrer noopener"
