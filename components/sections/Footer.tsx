@@ -7,7 +7,7 @@ import {
   WhatsappIcon,
 } from "@/components/ui/SocialIcons";
 import { useLenis } from "@/components/ui/SmoothScroll";
-import { coverStats, navLinks, site } from "@/lib/site";
+import { navLinks, site } from "@/lib/site";
 
 const whatsappLink = `https://wa.me/${site.phone}?text=${encodeURIComponent(
   "Hi Manali! I'd love to collaborate on a campaign.",
@@ -208,19 +208,6 @@ export function Footer() {
               <ArrowUpRight className="size-3" strokeWidth={1.5} />
             </a>
           </div>
-        </div>
-
-        <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-paper/10 pt-8 sm:grid-cols-4">
-          {coverStats.map((stat) => (
-            <div key={stat.label}>
-              <p className="display text-[clamp(1.8rem,3vw,2.5rem)] leading-none">
-                {stat.value}
-              </p>
-              <p className="label mt-2 text-[8px] text-paper/40">
-                {stat.label}
-              </p>
-            </div>
-          ))}
         </div>
 
         <div className="mt-16 border-t border-paper/10 pt-8">
