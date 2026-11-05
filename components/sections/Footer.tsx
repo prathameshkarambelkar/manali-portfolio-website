@@ -7,7 +7,15 @@ import {
   WhatsappIcon,
 } from "@/components/ui/SocialIcons";
 import { useLenis } from "@/components/ui/SmoothScroll";
-import { navLinks, site } from "@/lib/site";
+import { coverStats, navLinks, site } from "@/lib/site";
+
+const whatsappLink = `https://wa.me/${site.phone}?text=${encodeURIComponent(
+  "Hi Manali! I'd love to collaborate on a campaign.",
+)}`;
+
+const mailLink = `mailto:${site.email}?subject=${encodeURIComponent(
+  "Collaboration enquiry — Manali Jagtap",
+)}`;
 
 export function Footer() {
   const lenis = useLenis();
@@ -41,7 +49,10 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden border-t border-paper/10 bg-ink pt-16 text-paper">
+    <footer
+      id="contact"
+      className="relative scroll-mt-24 overflow-hidden border-t border-paper/10 bg-ink pt-16 text-paper"
+    >
       <div className="container-x">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -133,7 +144,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`https://wa.me/${site.phone}`}
+                  href={whatsappLink}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="group inline-flex items-center gap-2 text-sm text-paper/60 transition-colors duration-300 hover:text-paper"
@@ -157,18 +168,59 @@ export function Footer() {
             >
               {site.email}
             </a>
+            <a
+              href={site.instagram}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="label link-line mt-2 block w-fit text-[8px] text-paper/55"
+            >
+              DM on Instagram
+            </a>
             <p className="mt-3 text-xs leading-relaxed text-paper/40">
               {site.availability}
             </p>
-            <button
-              type="button"
-              onClick={() => go("#contact")}
+            <p className="mt-1 text-xs leading-relaxed text-paper/40">
+              Booking 2026–27
+            </p>
+            <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-paper/10 pt-4">
+              <div>
+                <p className="label text-[7px] text-paper/35">Best for</p>
+                <p className="mt-1 text-xs leading-relaxed text-paper/60">
+                  Travel, food, beauty, lifestyle
+                </p>
+              </div>
+              <div>
+                <p className="label text-[7px] text-paper/35">Response</p>
+                <p className="mt-1 text-xs leading-relaxed text-paper/60">
+                  Within 24 hours
+                </p>
+              </div>
+            </div>
+            <p className="mt-3 text-xs leading-relaxed text-paper/40">
+              Send dates, location, deliverables and budget. A moodboard helps
+              too.
+            </p>
+            <a
+              href={mailLink}
               className="btn btn--ghost-light mt-6 !px-4 !py-2.5"
             >
               Start a project
               <ArrowUpRight className="size-3" strokeWidth={1.5} />
-            </button>
+            </a>
           </div>
+        </div>
+
+        <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-paper/10 pt-8 sm:grid-cols-4">
+          {coverStats.map((stat) => (
+            <div key={stat.label}>
+              <p className="display text-[clamp(1.8rem,3vw,2.5rem)] leading-none">
+                {stat.value}
+              </p>
+              <p className="label mt-2 text-[8px] text-paper/40">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
 
         <div className="mt-16 border-t border-paper/10 pt-8">

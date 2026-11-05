@@ -10,7 +10,7 @@ import { PhoneFrame } from "@/components/ui/PhoneFrame";
 import { useReelPlayer } from "@/components/ui/ReelPlayerProvider";
 import { MaskLines } from "@/components/ui/Reveal";
 import { useLenis } from "@/components/ui/SmoothScroll";
-import { coverStats, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 const coverReels = [
   {
@@ -295,33 +295,10 @@ export function Cover() {
             </div>
           </div>
 
-          <motion.div
-            className="mt-12 grid grid-cols-2 divide-y divide-ink/10 border-y border-ink/15 sm:grid-cols-4 sm:divide-x sm:divide-y-0"
-            initial={{ opacity: 0 }}
-            animate={ready ? { opacity: 1 } : {}}
-            transition={{ duration: 1, delay: 1.1 }}
-          >
-            {coverStats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className={`px-3 py-5 sm:px-5 ${
-                  index === 0 ? "sm:pl-0" : ""
-                }`}
-              >
-                <p className="display text-[clamp(1.8rem,3vw,2.5rem)] leading-none">
-                  {stat.value}
-                </p>
-                <p className="label mt-2 text-[8px] text-ink-soft">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </motion.div>
-
           <motion.button
             type="button"
             onClick={() => scrollTo("#about")}
-            className="mt-6 flex items-center gap-2 text-ink-soft transition-colors hover:text-ink"
+            className="mt-10 flex items-center gap-2 text-ink-soft transition-colors hover:text-ink"
             initial={{ opacity: 0 }}
             animate={ready ? { opacity: 1 } : {}}
             transition={{ duration: 0.9, delay: 1.2 }}

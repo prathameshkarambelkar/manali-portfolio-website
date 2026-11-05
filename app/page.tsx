@@ -1,4 +1,3 @@
-import { Contact } from "@/components/sections/Contact";
 import { Cover } from "@/components/sections/Cover";
 import { Footer } from "@/components/sections/Footer";
 import { Insights } from "@/components/sections/Insights";
@@ -17,7 +16,6 @@ export default function Home() {
         <Themes />
         <Videos />
         <Partners />
-        <Contact />
       </main>
       <Footer />
     </>
