@@ -20,7 +20,8 @@ Built as a one-page media kit for brands: cover reels, creator portrait, Instagr
 
 - Next.js 16 (App Router) + React 19 + TypeScript
 - Tailwind CSS v4 with a custom cream / teal / terracotta editorial system
-- Motion for reveals, parallax, counters, the reel player and the arc carousel
+- Motion for reveals, parallax, counters and the reel player
+- GSAP + ScrollTrigger for the scroll-linked arc flow
 - Lenis for smooth scrolling
 - Bodoni Moda (display), Jost (UI/body), Mrs Saint Delafield (script)
 
@@ -52,7 +53,7 @@ To make those playable, add their MP4/WebM files to `public/videos/` and add `vi
 
 ## Reel arc carousel
 
-The Best Videos section uses a draggable arc carousel of five reels. Cards are positioned on a 15° arc with a radius of four card widths. Drag/swipe horizontally, use the arrow buttons, or focus the carousel and use the left/right arrow keys. The center card is the active reel; tap it to open the in-site player. Edit the `videos` array in `lib/site.ts` to change the five reels.
+The Best Videos section uses a draggable arc carousel of five reels. Cards are positioned on a 15° arc with a radius of four card widths. As the page scrolls, GSAP ScrollTrigger gently flows the whole arc to the right. Drag/swipe horizontally, use the arrow buttons, or focus the carousel and use the left/right arrow keys. The center card is the active reel; tap it to open the in-site player. Edit the `videos` array in `lib/site.ts` to change the five reels.
 
 ## Editing content
 

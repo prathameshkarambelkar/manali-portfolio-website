@@ -7,8 +7,13 @@ import {
   useState,
   type PointerEvent as ReactPointerEvent,
 } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReelCard } from "@/components/ui/ReelCard";
+import { useLenis } from "@/components/ui/SmoothScroll";
 import type { Video } from "@/lib/site";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const STEP_DEG = 15;
 const RADIUS_FACTOR = 4;
@@ -17,6 +22,8 @@ const CARD_MAX = 270;
 
 export function ArcCarousel({ videos }: { videos: Video[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const fanRef = useRef<HTMLDivElement>(null);
+  const lenis = useLenis();
   const drag = useRef({
     startX: 0,
     startY: 0,
@@ -44,6 +51,43 @@ export function ArcCarousel({ videos }: { videos: Video[] }) {
     if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const fan = fanRef.current;
+    if (!fan) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        fan,
+        { xPercent: -10 },
+        {
+          xPercent: 10,
+          ease: "none",
+          scrollTrigger: {
+            trigger: fan,
+            start: "top 88%",
+            end: "bottom 12%",
+            scrub: 1,
+          },
+        },
+      );
+    }, fan);
+
+    return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    if (!lenis) return;
+    const update = () => ScrollTrigger.update();
+    lenis.on("scroll", update);
+    return () => lenis.off("scroll", update);
+  }, [lenis]);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => ScrollTrigger.refresh());
+    return () => cancelAnimationFrame(frame);
+  }, [cardWidth]);
 
   const maxIndex = videos.length - 1;
   const activeIndex = Math.round(position);
@@ -109,8 +153,9 @@ export function ArcCarousel({ videos }: { videos: Video[] }) {
 
   return (
     <div className="relative">
-      <div
-        ref={containerRef}
+      <div ref={fanRef} className="will-change-transform">
+        <div
+          ref={containerRef}
         role="region"
         aria-roledescription="carousel"
         aria-label="Best reels"
@@ -172,6 +217,7 @@ export function ArcCarousel({ videos }: { videos: Video[] }) {
             </div>
           );
         })}
+        </div>
       </div>
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-4 border-t border-ink/10 pt-4">

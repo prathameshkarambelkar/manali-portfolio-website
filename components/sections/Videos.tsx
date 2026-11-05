@@ -8,7 +8,7 @@ export function Videos() {
   return (
     <section
       id="videos"
-      className="relative border-t border-ink/10 bg-paper py-24 sm:py-32"
+      className="relative overflow-hidden border-t border-ink/10 bg-paper py-24 sm:py-32"
     >
       <div className="container-x">
         <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
@@ -26,7 +26,7 @@ export function Videos() {
               wellness.
             </p>
             <p className="label mt-4 text-[8px] text-ink-soft">
-              Drag the arc · tap a reel to watch in-page
+              Scroll to flow · drag the arc · tap to watch
             </p>
           </div>
         </div>
