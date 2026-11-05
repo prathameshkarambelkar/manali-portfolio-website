@@ -10,11 +10,11 @@ Built as a one-page media kit for brands: cover reels, creator portrait, Instagr
 
 - **Cover** — Portfolio title, name, Instagram + food handles, three vertical reel thumbnails
 - **01 Meet the creator** — Hello, I'm Manali, bio and an off-duty portrait
-- **02 Insights** — Instagram-style dashboard: views, followers, net followers, viewers, age / top cities / languages, reel-share highlight
+- **02 Insights** — Instagram-style dashboard: views, followers, net followers, viewers, age / top cities / languages, reel-share panel
 - **03 Concept themes** — Reviews, Unboxing, GRWM, Fashion & shopping, Travel reels, Stay tours, Café & food
 - **04 Best videos** — five phone-framed reels in a draggable arc carousel; in-site player
 - **05 Previous partnerships** — real brand logo list with links and collab status, plus a featured Casa Regal stay-tour reel
-- **Footer / Contact** — stats, email, Instagram DM, WhatsApp and contact details
+- **Footer / Contact** — email, Instagram DM, WhatsApp and contact details
 
 ## Stack
 
@@ -60,7 +60,6 @@ The Best Videos section uses a draggable arc carousel of five reels. Cards are p
 Everything is in `lib/site.ts`:
 
 - `site` — name, handles, tagline, bio, location, email, phone, availability
-- `coverStats` — the four stats in the footer
 - `insights` — dashboard metrics, age brackets, top cities, languages, reel/story views
 - `themes` — the seven concept cards
 - `videos` — the five carousel reels: titles, brands, types, view counts, images, local video paths, start times

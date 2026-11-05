@@ -11,7 +11,6 @@ export const site = {
   phone: "919820000013",
   instagram: "https://www.instagram.com/manalijagtap_13/",
   foodInstagram: "https://www.instagram.com/forking_aroundddd/",
-  since: "2023",
   availability: "Open for collaborations · 2026",
   bio: [
     "I'm Manali — a Mumbai-based travel and lifestyle creator who plans trips around light, food and the stories in between. From Ganga aarti mornings in Haridwar to slow Goa afternoons, I make content that feels like a friend's recommendation.",
@@ -20,13 +19,6 @@ export const site = {
   tags: ["Travel", "Food", "Beauty", "Lifestyle", "Stays"],
 };
 
-export const coverStats = [
-  { value: "525K", label: "views in 30 days" },
-  { value: "3,357", label: "followers" },
-  { value: "793K", label: "top reel" },
-  { value: "4", label: "brand partners" },
-];
-
 export const insights = {
   period: "Last 30 days",
   views: "525,140",
@@ -34,7 +26,6 @@ export const insights = {
   netFollowers: "+95",
   viewers: "373,659",
   reelShare: "97%",
-  dailyAverage: "17.5K",
   indiaShare: "58.9%",
   age: [
     { label: "13–17", value: 1.0 },

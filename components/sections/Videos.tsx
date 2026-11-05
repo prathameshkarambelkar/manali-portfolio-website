@@ -8,7 +8,7 @@ export function Videos() {
   return (
     <section
       id="videos"
-      className="relative overflow-hidden border-t border-ink/10 bg-paper py-24 sm:py-32"
+      className="relative overflow-hidden border-t border-ink/10 bg-paper pt-24 pb-10 sm:pt-32 sm:pb-14"
     >
       <div className="container-x">
         <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">

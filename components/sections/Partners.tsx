@@ -23,7 +23,7 @@ export function Partners() {
     });
 
   return (
-    <section id="partners" className="relative py-24 sm:py-32">
+    <section id="partners" className="relative pt-10 pb-24 sm:pt-14 sm:pb-32">
       <div className="container-x">
         <div className="grid gap-8 border-t border-ink/15 pt-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">

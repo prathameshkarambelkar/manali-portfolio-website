@@ -5,7 +5,6 @@ import {
   CalendarDays,
   Eye,
   Play,
-  Sparkles,
   UserPlus,
   Users,
 } from "lucide-react";
@@ -245,63 +244,36 @@ export function Insights() {
               </div>
             </div>
 
-            <div className="grid gap-2.5 border-t border-ink/10 p-5 sm:p-7 lg:grid-cols-3">
-              <div className="relative overflow-hidden bg-teal p-6 text-paper lg:col-span-2">
-                <span
-                  aria-hidden="true"
-                  className="script pointer-events-none absolute -bottom-7 right-2 select-none text-[7rem] leading-none text-paper/[0.06]"
-                >
-                  525K
-                </span>
-                <div className="relative flex items-start justify-between gap-6">
+            <div className="border-t border-ink/10 p-5 sm:p-7">
+              <div className="border border-ink/10 bg-paper-2/25 p-6 sm:p-7">
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
                   <div>
-                    <p className="label text-[8px] text-gold">
-                      The highlight
-                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="label text-[8px] text-ink-soft">Reel share</p>
+                      <Play
+                        className="size-3.5 text-teal/60"
+                        strokeWidth={1.4}
+                      />
+                    </div>
                     <p className="display mt-3 text-[clamp(2.2rem,4vw,3.2rem)] leading-none">
-                      {insights.views} views
+                      {insights.reelShare}
                     </p>
-                    <p className="mt-2 text-sm text-paper/65">
-                      in the last 30 days — roughly{" "}
-                      {insights.dailyAverage} views a day.
+                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                      of all views came from reels this month.
                     </p>
-                    <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-t border-paper/20 pt-3">
-                      <span className="label text-[7px] text-paper/50">
-                        {insights.followers} followers
-                      </span>
-                      <span className="label text-[7px] text-paper/50">
-                        {insights.netFollowers} net
-                      </span>
-                    </div>
                   </div>
-                  <span className="grid size-10 shrink-0 place-items-center rounded-full border border-paper/25">
-                    <Sparkles className="size-4 text-gold" strokeWidth={1.4} />
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-between border border-ink/10 bg-paper-2/25 p-6">
-                <div className="flex items-start justify-between gap-3">
-                  <p className="label text-[8px] text-ink-soft">Reel share</p>
-                  <Play className="size-4 text-teal/60" strokeWidth={1.4} />
-                </div>
-                <div className="mt-6">
-                  <p className="display text-[clamp(2rem,3.2vw,2.6rem)] leading-none">
-                    {insights.reelShare}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                    of all views came from reels this month.
-                  </p>
-                </div>
-                <div className="mt-5 grid grid-cols-2 gap-2 border-t border-ink/10 pt-3">
-                  {insights.viewsByType.map((row) => (
-                    <div key={row.label}>
-                      <p className="display text-lg leading-none">{row.value}</p>
-                      <p className="label mt-1 text-[6px] text-ink-soft">
-                        {row.label}
-                      </p>
-                    </div>
-                  ))}
+                  <div className="grid grid-cols-2 gap-8 border-t border-ink/10 pt-4 sm:min-w-[220px] sm:border-t-0 sm:pt-0">
+                    {insights.viewsByType.map((row) => (
+                      <div key={row.label}>
+                        <p className="display text-2xl leading-none">
+                          {row.value}
+                        </p>
+                        <p className="label mt-1 text-[7px] text-ink-soft">
+                          {row.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

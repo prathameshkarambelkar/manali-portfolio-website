@@ -72,25 +72,6 @@ export function Meet() {
                   <dd className="text-sm">{site.location}</dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-6 border-b border-ink/10 py-3">
-                  <dt className="label text-[8px] text-ink-soft">
-                    Creating since
-                  </dt>
-                  <dd className="text-sm">{site.since} — present</dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-6 border-b border-ink/10 py-3">
-                  <dt className="label text-[8px] text-ink-soft">Foodie side</dt>
-                  <dd className="text-sm">
-                    <a
-                      href={site.foodInstagram}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="link-line"
-                    >
-                      {site.foodHandle}
-                    </a>
-                  </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-6 border-b border-ink/10 py-3">
                   <dt className="label text-[8px] text-ink-soft">Currently</dt>
                   <dd className="text-sm">{site.availability}</dd>
                 </div>
