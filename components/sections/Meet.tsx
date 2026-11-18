@@ -8,8 +8,8 @@ import { site } from "@/lib/site";
 
 export function Meet() {
   const lenis = useLenis();
-  const goToVideos = () => {
-    const el = document.querySelector("#videos");
+  const goToWork = () => {
+    const el = document.querySelector("#partners");
     if (!el) return;
     if (lenis) lenis.scrollTo(el as HTMLElement, { offset: -20 });
     else el.scrollIntoView({ behavior: "smooth" });
@@ -82,12 +82,12 @@ export function Meet() {
               <div className="mt-8 flex flex-wrap items-end justify-between gap-5">
                 <div>
                   <p className="label text-[8px] text-ink-soft">
-                    Travel · Food · Beauty · Lifestyle
+                    Lifestyle · Travel · Food · UGC
                   </p>
                 </div>
                 <button
                   type="button"
-                  onClick={goToVideos}
+                  onClick={goToWork}
                   className="group flex items-center gap-2 text-sm"
                 >
                   <span className="link-line">See what I&apos;ve made</span>

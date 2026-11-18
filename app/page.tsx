@@ -4,7 +4,6 @@ import { Insights } from "@/components/sections/Insights";
 import { Meet } from "@/components/sections/Meet";
 import { Partners } from "@/components/sections/Partners";
 import { Themes } from "@/components/sections/Themes";
-import { Videos } from "@/components/sections/Videos";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
         <Meet />
         <Insights />
         <Themes />
-        <Videos />
         <Partners />
       </main>
       <Footer />
