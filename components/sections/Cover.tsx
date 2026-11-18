@@ -14,6 +14,7 @@ import { site } from "@/lib/site";
 
 type CoverReel = {
   image: string;
+  alt: string;
   place: string;
   views?: string;
   meta?: string;
@@ -31,6 +32,7 @@ type CoverReel = {
 const coverReels: CoverReel[] = [
   {
     image: "/images/cover-landour.webp",
+    alt: "Manali Jagtap on a scooter at golden hour in Landour",
     place: "Landour",
     meta: "Instagram",
     href: "https://www.instagram.com/reel/DSBzOkdimLL/",
@@ -38,6 +40,7 @@ const coverReels: CoverReel[] = [
   },
   {
     image: "/images/cover-goa.webp",
+    alt: "Manali Jagtap on a Goa beach at sunset",
     place: "Goa",
     meta: "Instagram",
     href: "https://www.instagram.com/reel/DY7XomgqDFw/",
@@ -45,6 +48,7 @@ const coverReels: CoverReel[] = [
   },
   {
     image: "/images/video-mars.webp",
+    alt: "MARS Cosmetics foundation reel cover",
     place: "MARS",
     views: "13.1K",
     video: "/videos/mars.mp4",
@@ -280,7 +284,7 @@ export function Cover() {
                       <div className="relative aspect-[9/16] overflow-hidden">
                         <img
                           src={reel.image}
-                          alt={`${reel.place} reel`}
+                          alt={reel.alt}
                           loading="eager"
                           className="grade h-full w-full object-cover transition-transform duration-[1100ms] group-hover:scale-[1.06]"
                         />

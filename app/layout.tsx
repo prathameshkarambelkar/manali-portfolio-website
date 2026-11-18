@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Bodoni_Moda, Jost, Mrs_Saint_Delafield } from "next/font/google";
 import { SiteShell } from "@/components/ui/SiteShell";
+import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const bodoni = Bodoni_Moda({
@@ -26,7 +27,7 @@ const scriptFace = Mrs_Saint_Delafield({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://manalijagtap.com"),
+  metadataBase: new URL(siteUrl),
   title: "Manali Jagtap — Creator Portfolio",
   description:
     "Mumbai-based creator working across lifestyle, travel, food and UGC. Travel films, food features, UGC edits and brand campaigns — with the pacing of a film and the honesty of a friend's recommendation.",
@@ -41,12 +42,13 @@ export const metadata: Metadata = {
     "brand content",
   ],
   authors: [{ name: "Manali Jagtap" }],
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Manali Jagtap — Creator Portfolio",
     description:
       "Lifestyle, travel, food and UGC content. Based in Mumbai, filming everywhere. 1.16M views in the last 30 days.",
     type: "website",
-    url: "https://manalijagtap.com",
+    url: "/",
     siteName: "Manali Jagtap",
     images: [
       {

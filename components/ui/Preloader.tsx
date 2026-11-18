@@ -10,6 +10,7 @@ type PreloaderProps = {
 export function Preloader({ skip, onDone }: PreloaderProps) {
   const [count, setCount] = useState(0);
   const [leaving, setLeaving] = useState(false);
+  const [gone, setGone] = useState(false);
   const onDoneRef = useRef(onDone);
   onDoneRef.current = onDone;
 
@@ -43,6 +44,7 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
         timers.push(
           window.setTimeout(() => {
             document.documentElement.style.overflow = previousOverflow;
+            setGone(true);
             try {
               sessionStorage.setItem("mj-intro", "1");
             } catch {
@@ -62,7 +64,7 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
     };
   }, [skip]);
 
-  if (skip) return null;
+  if (skip || gone) return null;
 
   return (
     <div
@@ -81,9 +83,12 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
       </div>
 
       <div className="relative">
-        <h1 className="display pre-reveal text-[clamp(3rem,10vw,9rem)] leading-[0.8]">
+        <p
+          aria-hidden="true"
+          className="display pre-reveal text-[clamp(3rem,10vw,9rem)] leading-[0.8]"
+        >
           PORTFOLIO
-        </h1>
+        </p>
         <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
           <p className="script text-[clamp(2rem,5vw,4.5rem)] text-wine">
             the creator edit
