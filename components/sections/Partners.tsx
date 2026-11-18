@@ -2,44 +2,25 @@
 
 import { ArrowUpRight, Play } from "lucide-react";
 import { PhoneFrame } from "@/components/ui/PhoneFrame";
-import { useReelPlayer } from "@/components/ui/ReelPlayerProvider";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { SmoothLink } from "@/components/ui/SmoothLink";
 import { partners } from "@/lib/site";
 
-export function Partners() {
-  const { openReel } = useReelPlayer();
-  const openCasaRegal = () =>
-    openReel({
-      title: "Casa Regal villa",
-      brand: "Casa Regal",
-      image: "/images/partner-featured.webp",
-      views: "24.6K",
-      type: "Stay tour",
-      video: "/videos/casa-regal.mp4",
-      webm: "/videos/casa-regal.webm",
-      startAt: 6,
-    });
+const casaRegalReel = "https://www.instagram.com/reel/DXRqGQOCkkK/";
 
+export function Partners() {
   return (
     <section id="partners" className="relative pt-10 pb-24 sm:pt-14 sm:pb-32">
       <div className="container-x">
         <div className="grid gap-8 border-t border-ink/15 pt-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <SectionLabel index="05">Previous partnerships</SectionLabel>
+            <SectionLabel index="04">Previous partnerships</SectionLabel>
             <h2 className="display-soft mt-4 text-[clamp(2.6rem,5.4vw,4.6rem)] leading-[0.98]">
               Brands I&apos;ve
               <br />
               <em className="italic text-clay">collaborated with.</em>
             </h2>
-          </div>
-          <div className="lg:col-span-4 lg:col-start-9">
-            <p className="body-copy max-w-sm">
-              Three live collaborations and one in progress — wellness, beauty
-              and a South Goa stay. Every one got content built around their
-              voice, not mine.
-            </p>
           </div>
         </div>
 
@@ -128,18 +109,19 @@ export function Partners() {
           <div className="order-1 lg:order-2 lg:col-span-5">
             <Reveal delay={0.1}>
               <div className="mx-auto w-full max-w-[260px] sm:max-w-[300px] lg:sticky lg:top-28">
-                <button
-                  type="button"
-                  onClick={openCasaRegal}
+                <a
+                  href={casaRegalReel}
+                  target="_blank"
+                  rel="noreferrer noopener"
                   className="group block w-full text-left"
                   data-cursor="Play stay tour"
-                  aria-label="Play the Casa Regal stay tour"
+                  aria-label="Watch the Casa Regal stay tour on Instagram"
                 >
                   <PhoneFrame>
                     <div className="relative aspect-[9/16] overflow-hidden">
                       <img
-                        src="/images/partner-featured.webp"
-                        alt="Casa Regal villa collaboration"
+                        src="/images/partner-casa-regal.webp"
+                        alt="Casa Regal stay tour reel"
                         loading="lazy"
                         className="grade h-full w-full object-cover transition-transform duration-[1100ms] group-hover:scale-[1.05]"
                       />
@@ -178,18 +160,19 @@ export function Partners() {
                       </div>
                     </div>
                   </PhoneFrame>
-                </button>
+                </a>
                 <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
                   <p className="text-xs text-ink-soft">
                     Featured collaboration — Casa Regal, 2026
                   </p>
-                  <button
-                    type="button"
-                    onClick={openCasaRegal}
+                  <a
+                    href={casaRegalReel}
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="label link-line text-[7px]"
                   >
                     Play
-                  </button>
+                  </a>
                 </div>
               </div>
             </Reveal>
