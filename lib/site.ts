@@ -14,18 +14,18 @@ export const site = {
   availability: "Open for collaborations · 2026",
   bio: [
     "I'm Manali — a Mumbai-based travel and lifestyle creator who plans trips around light, food and the stories in between. From Ganga aarti mornings in Haridwar to slow Goa afternoons, I make content that feels like a friend's recommendation.",
-    "I create travel, stay, café and beauty content for brands — reviews, stay tours, unboxings and the kind of reels people save for their next trip. And I still get excited about a good window seat.",
+    "I create travel, stay, café and UGC content for brands — reviews, stay tours, unboxings and the kind of reels people save for their next trip. And I still get excited about a good window seat.",
   ],
-  tags: ["Travel", "Food", "Beauty", "Lifestyle", "Stays"],
+  tags: ["Lifestyle", "Travel", "Food", "UGC"],
 };
 
 export const insights = {
   period: "Last 30 days",
-  views: "525,140",
-  followers: "3,357",
-  netFollowers: "+95",
-  viewers: "373,659",
-  reelShare: "97%",
+  views: "1.16M",
+  followers: "3,600",
+  netFollowers: "+285",
+  viewers: "793,163",
+  reelShare: "97.8%",
   indiaShare: "58.9%",
   age: [
     { label: "13–17", value: 1.0 },
@@ -49,8 +49,8 @@ export const insights = {
     { label: "Marathi", value: 6.7 },
   ],
   viewsByType: [
-    { label: "Reels", value: "510K" },
-    { label: "Stories", value: "7.4K" },
+    { label: "Reels", value: "1.1M" },
+    { label: "Stories", value: "25.9K" },
   ],
 };
 
@@ -223,6 +223,14 @@ export const partners: Partner[] = [
     tone: "paper",
   },
   {
+    name: "Fiama",
+    category: "Beauty & personal care",
+    logo: "/images/brands/fiama.webp",
+    href: "https://www.fiama.in/",
+    status: "Content in progress",
+    tone: "paper",
+  },
+  {
     name: "Casa Regal",
     category: "Stays & villas · South Goa",
     logo: "/images/brands/casa-regal.webp",
@@ -234,7 +242,7 @@ export const partners: Partner[] = [
 ];
 
 export const navLinks = [
-  { label: "Work", href: "#videos" },
+  { label: "Work", href: "#partners" },
   { label: "About", href: "#about" },
   { label: "Insights", href: "#insights" },
   { label: "Contact", href: "#contact" },
