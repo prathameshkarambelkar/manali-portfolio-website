@@ -12,20 +12,35 @@ import { MaskLines } from "@/components/ui/Reveal";
 import { useLenis } from "@/components/ui/SmoothScroll";
 import { site } from "@/lib/site";
 
-const coverReels = [
+type CoverReel = {
+  image: string;
+  place: string;
+  views?: string;
+  meta?: string;
+  href?: string;
+  video?: string;
+  webm?: string;
+  startAt?: number;
+  tilt: string;
+};
+
+/**
+ * Reels with an `href` are public posts — the card opens the reel on Instagram.
+ * Reels with a local `video` play in the in-site player.
+ */
+const coverReels: CoverReel[] = [
   {
-    image: "/images/cover-aarti.webp",
-    place: "Haridwar",
-    views: "793K",
+    image: "/images/cover-landour.webp",
+    place: "Landour",
+    meta: "Instagram",
+    href: "https://www.instagram.com/reel/DSBzOkdimLL/",
     tilt: "-rotate-[1.5deg]",
   },
   {
-    image: "/images/partner-featured.webp",
-    place: "Casa Regal",
-    views: "24.6K",
-    video: "/videos/casa-regal.mp4",
-    webm: "/videos/casa-regal.webm",
-    startAt: 6,
+    image: "/images/cover-goa.webp",
+    place: "Goa",
+    meta: "Instagram",
+    href: "https://www.instagram.com/reel/DY7XomgqDFw/",
     tilt: "rotate-[0.8deg]",
   },
   {
@@ -42,7 +57,7 @@ const coverReels = [
 const tickerItems = [
   "Travel stories",
   "Food features",
-  "Beauty edits",
+  "UGC edits",
   "Fashion hauls",
   "Brand campaigns",
 ];
@@ -82,7 +97,7 @@ export function Cover() {
                 animate={ready ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Travel · Food · Beauty · Lifestyle
+                Lifestyle · Travel · Food · UGC
               </motion.p>
 
               <h1 className="mt-4">
@@ -152,7 +167,7 @@ export function Cover() {
                   {site.tagline}
                 </p>
                 <p className="body-copy mt-3 max-w-[31rem]">
-                  Travel, food, beauty and lifestyle content for brands that want to
+                  Travel, food, UGC and lifestyle content for brands that want to
                   feel like a recommendation — not an advertisement.
                 </p>
               </motion.div>
@@ -179,7 +194,13 @@ export function Cover() {
                 <Magnetic>
                   <button
                     type="button"
-                    onClick={() => scrollTo("#videos")}
+                    onClick={() =>
+                      window.open(
+                        `${site.instagram}reels/`,
+                        "_blank",
+                        "noopener,noreferrer",
+                      )
+                    }
                     className="btn btn--solid"
                     data-cursor="Watch"
                   >
@@ -222,7 +243,11 @@ export function Cover() {
                   <motion.button
                     key={reel.place}
                     type="button"
-                    onClick={() =>
+                    onClick={() => {
+                      if (reel.href) {
+                        window.open(reel.href, "_blank", "noopener,noreferrer");
+                        return;
+                      }
                       openReel({
                         title: `${reel.place} reel`,
                         brand: reel.place,
@@ -232,8 +257,8 @@ export function Cover() {
                         video: reel.video,
                         webm: reel.webm,
                         startAt: reel.startAt,
-                      })
-                    }
+                      });
+                    }}
                     className={`group block text-left ${reel.tilt} ${
                       index === 1 ? "mt-7 sm:mt-10" : index === 2 ? "mt-2" : ""
                     }`}
@@ -245,7 +270,11 @@ export function Cover() {
                       ease: [0.16, 1, 0.3, 1],
                     }}
                     data-cursor="Play reel"
-                    aria-label={`Play the ${reel.place} reel`}
+                    aria-label={
+                      reel.href
+                        ? `Watch the ${reel.place} reel on Instagram`
+                        : `Play the ${reel.place} reel`
+                    }
                   >
                     <PhoneFrame className="transition-transform duration-700 group-hover:rotate-0 group-hover:scale-[1.02]">
                       <div className="relative aspect-[9/16] overflow-hidden">
@@ -266,7 +295,16 @@ export function Cover() {
                             {reel.place}
                           </span>
                           <span className="label text-[7px] text-paper/60">
-                            {reel.views}
+                            {reel.meta ? (
+                              <>
+                                <span className="sm:hidden">IG</span>
+                                <span className="hidden sm:inline">
+                                  {reel.meta}
+                                </span>
+                              </>
+                            ) : (
+                              reel.views
+                            )}
                           </span>
                         </div>
                       </div>
@@ -282,11 +320,17 @@ export function Cover() {
                 transition={{ duration: 0.9, delay: 1.05 }}
               >
                 <span className="label text-[8px] text-ink-soft">
-                  Haridwar · Casa Regal · MARS
+                  Landour · Goa · MARS
                 </span>
                 <button
                   type="button"
-                  onClick={() => scrollTo("#videos")}
+                  onClick={() =>
+                    window.open(
+                      `${site.instagram}reels/`,
+                      "_blank",
+                      "noopener,noreferrer",
+                    )
+                  }
                   className="label link-line text-[8px]"
                 >
                   See all reels
