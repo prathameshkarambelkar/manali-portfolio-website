@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bodoni_Moda, Jost, Mrs_Saint_Delafield } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SiteShell } from "@/components/ui/SiteShell";
 import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
@@ -84,6 +85,7 @@ export default function RootLayout({
     >
       <body>
         <SiteShell>{children}</SiteShell>
+        <Analytics />
       </body>
     </html>
   );
