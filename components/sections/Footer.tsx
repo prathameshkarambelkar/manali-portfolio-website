@@ -64,7 +64,7 @@ export function Footer() {
               Manali
             </button>
             <p className="label mt-2 text-[8px] text-paper/40">
-              Travel · Food · Beauty · Lifestyle
+              Lifestyle · Travel · Food · UGC
             </p>
             <p className="mt-5 max-w-[16rem] text-sm leading-relaxed text-paper/55">
               {site.tagline}
@@ -192,7 +192,7 @@ export function Footer() {
               <div>
                 <p className="label text-[7px] text-paper/35">Best for</p>
                 <p className="mt-1 text-xs leading-relaxed text-paper/60">
-                  Travel, food, beauty, lifestyle
+                  Lifestyle, travel, food, UGC
                 </p>
               </div>
               <div>
@@ -227,7 +227,7 @@ export function Footer() {
             © 2026 Manali Jagtap. All rights reserved.
           </p>
           <p className="label text-[8px] text-paper/30">
-            Creator Portfolio · Travel · Food · Beauty · Lifestyle
+            Creator Portfolio · Lifestyle · Travel · Food · UGC
           </p>
           <button
             type="button"

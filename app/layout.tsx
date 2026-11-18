@@ -29,13 +29,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://manalijagtap.com"),
   title: "Manali Jagtap — Creator Portfolio",
   description:
-    "Mumbai-based creator working across travel, food, beauty and lifestyle. Travel films, food features, beauty edits and brand campaigns — with the pacing of a film and the honesty of a friend's recommendation.",
+    "Mumbai-based creator working across lifestyle, travel, food and UGC. Travel films, food features, UGC edits and brand campaigns — with the pacing of a film and the honesty of a friend's recommendation.",
   keywords: [
     "Manali Jagtap",
     "creator portfolio",
     "travel creator",
     "food creator",
-    "beauty creator",
+    "UGC creator",
     "lifestyle influencer",
     "Mumbai creator",
     "brand content",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Manali Jagtap — Creator Portfolio",
     description:
-      "Travel, food, beauty and lifestyle content. Based in Mumbai, filming everywhere. 525K views in the last 30 days.",
+      "Lifestyle, travel, food and UGC content. Based in Mumbai, filming everywhere. 1.16M views in the last 30 days.",
     type: "website",
     url: "https://manalijagtap.com",
     siteName: "Manali Jagtap",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Manali Jagtap — Creator Portfolio",
     description:
-      "Travel, food, beauty and lifestyle content — with the pacing of a film and the honesty of a friend's recommendation.",
+      "Lifestyle, travel, food and UGC content — with the pacing of a film and the honesty of a friend's recommendation.",
     images: ["/images/meet-manali.webp"],
   },
 };
