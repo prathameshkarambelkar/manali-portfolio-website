@@ -10,13 +10,11 @@ type PreloaderProps = {
 export function Preloader({ skip, onDone }: PreloaderProps) {
   const [count, setCount] = useState(0);
   const [leaving, setLeaving] = useState(false);
-  const startedRef = useRef(false);
   const onDoneRef = useRef(onDone);
   onDoneRef.current = onDone;
 
   useEffect(() => {
-    if (skip || startedRef.current) return;
-    startedRef.current = true;
+    if (skip) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       onDoneRef.current();
@@ -27,6 +25,7 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
     document.documentElement.style.overflow = "hidden";
     window.scrollTo(0, 0);
 
+    const timers: number[] = [];
     let raf = 0;
     const start = performance.now();
     const duration = 1300;
@@ -39,16 +38,18 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
       if (progress < 1) {
         raf = requestAnimationFrame(tick);
       } else {
-        window.setTimeout(() => setLeaving(true), 150);
-        window.setTimeout(() => onDoneRef.current(), 350);
-        window.setTimeout(() => {
-          document.documentElement.style.overflow = previousOverflow;
-          try {
-            sessionStorage.setItem("mj-intro", "1");
-          } catch {
-            /* private mode — the intro will simply play again */
-          }
-        }, 1150);
+        timers.push(window.setTimeout(() => setLeaving(true), 150));
+        timers.push(window.setTimeout(() => onDoneRef.current(), 350));
+        timers.push(
+          window.setTimeout(() => {
+            document.documentElement.style.overflow = previousOverflow;
+            try {
+              sessionStorage.setItem("mj-intro", "1");
+            } catch {
+              /* private mode — the intro will simply play again */
+            }
+          }, 1150),
+        );
       }
     };
 
@@ -56,6 +57,7 @@ export function Preloader({ skip, onDone }: PreloaderProps) {
 
     return () => {
       cancelAnimationFrame(raf);
+      timers.forEach((timer) => window.clearTimeout(timer));
       document.documentElement.style.overflow = previousOverflow;
     };
   }, [skip]);
